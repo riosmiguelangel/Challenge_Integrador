@@ -25,7 +25,7 @@
 .aside__text {
     font-family: var(--base-font);
     font-size: var(--font-medium);
-    max-width: 240px;
+    width: 240px;
     border: 1px solid black; 
     border-radius: 5px;
     margin: var(--spacyng-8) 0;
