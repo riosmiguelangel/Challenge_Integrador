@@ -5,59 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Funkoshop</title>
+    <link rel="stylesheet" href="../../css/create.css">
 </head>
 <body>
     <header><!-- Inicio Header -->
-        <nav>
-            <a href="./index.html">
-                <img src="./img/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funkoshop">
-            </a>
-            <ul>
-                <li>
-                    <a href="../shop/shop.html">VER TIENDA</a>
-                </li>
-                <li>
-                    <a href="./admin.html">ADMIN</a>
-                </li>
-                <li>
-                    <a href="../../index.html">SALIR</a>
-                </li>
-                
-            </ul>
+        <nav class="navbar container">
+                <picture class="navbar__logo">
+                    <a href="../../index.html">
+                        <img src="../../img/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funkoshop">
+                    </a>
+                </picture>
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="../../index.html">VER TIENDA</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="./admin.html">ADMIN</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="">SALIR</a>
+                    </li>
+                </ul>  
         </nav>
     </header> <!-- Fin Header -->
-    <section>
-        <h1>INGRESAR A MI CUENTA</h1>
-        <p>Email:</p>
-        <p>Contraseña:</p>
-        <button>ingresar</button>
-        <input type="checkbox" name="recordarme" id="">
-        <p>Olvide mi contraseña</p>
-    </section>
-    <footer>
-        <nav>
-            <ul>
-                <li>
-                    <a href="../shop/shop.html">SHOP</a>
+
+    <main class="container">
+        <section class="crud-container">
+            <h3 class="crud__title">INGRESAR A MI CUENTA</h3>
+           
+            <form class="crud__items" action="">
+                <label id="crud__name" for="">Email:         
+                <input type="text" placeholder="Johndoe@correo.com"></label>
+
+                <label id="crud__name" for="">Contraseña:         
+                <input type="password" name="password" id="password" placeholder="⬮⬮⬮⬮⬮⬮⬮⬮⬮"></label>
+                
+                
+                <button>ingresar</button>
+                <input type="checkbox" name="recordarme" id="">
+                
+                <a href="register.html">Olvide mi contraseña</a>
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer class="footer"> <!-- INICIO FOOTER -->
+        <nav class="navbar container">
+            <ul class="navbar__items">
+                <li class="navbar_item">
+                    <a class="navbar__link" href="../../pages/shop/shop.html">SHOP</a>
                 </li>
-                <li>
-                    <a href="../admin/register.html">REGISTRARSE</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./register.html">REGISTRARSE</a>
                 </li>
-                <li>
-                    <a href="../admin/login.html">LOGIN</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./login.html">LOGIN</a>
                 </li>
-                <li>
-                    <a href="">CONTACTO</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./views/contact.html">CONTACTO</a>
                 </li>
             </ul>  
             <picture>
-                <a href="./index.html">
-                    <img src="../img/branding/isotype.svg" alt="Isologotipo de la marca Funkoshop">
+                <a href="../../index.html">
+                    <img src="../../img/branding/isotype.svg" alt="Isologotipo de la marca Funkoshop">
                 </a>                                
             </picture>
         </nav>
-    <p>All rights reserved 2023 - Funkoshop &copy;</p>
-</footer>
+    <p class="navbar__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+    </footer> <!-- FIN FOOTER -->
     
 </body>
 </html>

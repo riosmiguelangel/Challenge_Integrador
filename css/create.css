@@ -77,3 +77,12 @@
     text-align: center;
     border-top: 2px solid var(--primary-solid);
 }
+
+.crud__items a {
+    display: inline-flex;
+    gap: var(--spacyng-24);
+    width: 100%;
+    font-size: var(--font-xsmall);
+    color: var(--secondary-solid);
+    font-weight: 700;
+}
