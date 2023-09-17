@@ -1,0 +1,79 @@
+@import url(.//index.css);
+
+.crud-container {
+    margin-top:var(--spacyng-28) ;
+    /*display: flex;*/
+}
+
+.crud__title {
+    font-family: var(--alternative-font);
+    font-size: var(--font-jumbo);
+    font-weight: 900;
+}
+
+.crud__items {
+    font-family: var(--base-font);
+    max-width: 850px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: var(--spacyng-28) 0 ;
+    gap: var(--spacyng-36);    
+}
+
+.crud__items label {
+    font-size: var(--font-large);
+}
+
+.crud__items select {
+    padding: var(--spacyng-8);
+    padding-right: var(--spacyng-68);
+    margin-left: var(--spacyng-8);
+    border-radius: 5px;
+
+}
+
+#crud__name {
+    max-width: 590px;
+}
+.crud__items input {
+    border: none;
+    border-bottom: 2px solid var(--primary-solid);
+     
+}
+.crud__items textarea {
+    max-width: 100%;
+    padding: var(--spacyng-12);
+}
+#crud__image {
+    border: none;
+    padding-right: var(--spacyng-68);
+    width: 600px;
+}
+
+.crud__items  button {
+    width: 175px;
+    background-color: var(--primary-solid);
+    color: var(--light-font-solid);
+    border: none;
+    font-size: var(--font-xsmall);
+    padding: var(--spacyng-12);
+    margin-right: var(--spacyng-36);
+}
+
+.crud__items section {
+    display: inline-flex;
+    gap: var(--spacyng-24);
+    width: 100%;
+}
+
+.crud__items section picture {
+    max-width: 150px;
+   
+    
+}
+
+.crud__items  picture p {
+    text-align: center;
+    border-top: 2px solid var(--primary-solid);
+}
