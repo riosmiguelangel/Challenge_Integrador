@@ -1,0 +1,122 @@
+@import url(.//index.css);
+
+
+.section_container{
+    display:flex;
+    width: 1440px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    
+}
+
+.section__crear{
+    color: #1f1f1f;
+    text-align: right;
+    font-family: var(--alternative-font);
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.68px;
+    
+    
+
+}
+
+.section__formulario{
+    color: #1f1f1f;
+    text-align: right;
+    font-family: var(--alternative-font);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1.28px;
+    
+}
+.section__datos{
+    
+    margin-bottom: 36px;
+    color: #000;
+    font-family: var(--base-font);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.96px;
+    
+
+}
+.line_1, .line_2, .line_3, .line_4, .line_5{
+    width:208.6px;
+    height: 2px;
+    background:#f33;
+    border: none;
+    border-bottom: 2px solido var(--primary-solid);
+    margin-bottom: 36px;  
+    
+    
+    
+}
+.line_1, .line_2{
+    margin-left: 84px;
+}
+.line_3{
+    margin-left: 107px;
+}
+.line_4{
+    margin-left: 54px;
+}
+
+.boton_registro{
+    width: 102.995px;
+    height: 39.062px;
+    flex-shrink: 0;
+    background: #f33;
+    color:#fff;
+    border: none;
+    font-family: var(--base-font);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 36px;
+    margin-bottom: 36px;
+
+
+}
+.marcar_check{
+    width: 16.275px;
+    height: 16.275px;
+    flex-shrink: 0;
+    border-radius: 3px;
+    border: 2px solid #1f1f1f;
+    margin-bottom: 36px;
+}
+.acepto{
+    color: #1f1f1f;
+    font-family: var(--base-font);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+}
+.condiciones{
+    color: #1d84b5;
+    font-family: var(--base-font);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+@media screen and (max-width:480px) {
+    
+  
+}
+
+
