@@ -1,0 +1,82 @@
+@import url(.//index.css);
+
+/* ITEM */
+
+.item{
+    display: flex;
+    gap: var(--spacyng-36);
+    margin-left: var(--spacyng-128);
+    gap: var(--spacyng-16);
+}
+
+.item__img{
+    max-width: 500px;
+}
+
+.item__licence{
+    font-size: var(--font-small);
+    margin-top: var(--spacyng-8);
+    margin-bottom: var(--spacyng-8);
+}
+
+.item__price{
+    font-size: var(--font-xlarge);
+    margin-top: var(--spacyng-8);
+    margin-bottom: var(--spacyng-8);
+}
+
+.item__content{
+    margin-top: var(--spacyng-128);
+}
+
+.item__name{
+    font-size: var(--font-xlarge);
+}
+
+.item__pay{
+    margin-top: var(--spacyng-28);
+    display: flex;
+}
+
+.item__paypromo{
+    margin-top: var(--spacyng-28);
+    display: flex;
+    color: var(--secondary-solid);
+    font-weight: bold;
+    font-size: xx-small;
+}
+
+.item__paymethod{
+text-decoration: underline;
+}
+
+.item__buy {
+    width: 175px;
+    background-color: var(--primary-solid);
+    color: var(--light-font-solid);
+    border: none;
+    font-size: var(--font-xsmall);
+    padding: var(--spacyng-12);
+    
+    margin-left: var(--spacyng-36);
+    
+}
+
+.item__number{
+    width: 100px;
+    height: 35px;
+    align-items: center;
+    border-radius: 0.5%;
+    font-family: var(--base-font);
+    font-size: var(--font-medium);
+    text-align: center;
+}
+
+.item__minmax{
+    width: 20px;
+    background-color: var(--dark-bg-solid);
+    color: var(--light-font-solid);
+    font-size: var(--font-xsmall);
+    margin: 5px;
+   
+}
