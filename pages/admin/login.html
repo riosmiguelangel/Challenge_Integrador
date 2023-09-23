@@ -29,26 +29,30 @@
         </nav>
     </header> <!-- Fin Header -->
 
-    <main class="container">
-        <section class="crud-container">
-            <h3 class="crud__title">INGRESAR A MI CUENTA</h3>
+    <main>
+        <section class="login__container">
+            <h3 class="login__tittle">INGRESAR A MI CUENTA</h3>
            
-            <form class="crud__items" action="">
-                <label id="crud__name" for="">Email:         
-                <input type="text" placeholder="Johndoe@correo.com"></label>
+            <form class="login__form" action="" method="post">
+                <label class="login__textemail" for="">Email:</label>         
+                <input class="login__email" type="email" placeholder="Johndoe@correo.com">
 
-                <label id="crud__name" for="">Contraseña:         
-                <input type="password" name="password" id="password" placeholder="⬮⬮⬮⬮⬮⬮⬮⬮⬮"></label>
+                <label class="login__textpass" for="">Contraseña:</label>         
+                <input class="login__pass" type="password" name="password" id="password" value="password">
                 
-                
-                <button>ingresar</button>
-                <input type="checkbox" name="recordarme" id="">
-                
-                <a href="register.html">Olvide mi contraseña</a>
+                <article class="login__button">
+                    <button type="submit">ingresar</button>
+
+                    <label class="login__remember" for="">
+                        <input type="checkbox" name="recordarme" id="">
+                        <p>Recordarme</p>
+                    </label>
+
+                    <a class="login__forget" href="register.html">Olvide mi contraseña</a>
+
+                </article>
             </form>
-
         </section>
-
     </main>
 
     <footer class="footer"> <!-- INICIO FOOTER -->
