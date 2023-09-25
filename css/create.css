@@ -1,0 +1,236 @@
+@import url(.//index.css);
+
+
+.crud-container {
+    margin-top:var(--spacyng-28) ;
+    /*display: flex;*/
+}
+
+.crud__title {
+    font-family: var(--alternative-font);
+    font-size: var(--font-jumbo);
+    font-weight: 900;
+}
+
+.crud__items {
+    font-family: var(--base-font);
+    max-width: 850px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: var(--spacyng-28) 0 ;
+    gap: var(--spacyng-36);    
+}
+
+.crud__items label {
+    font-size: var(--font-large);
+}
+
+.crud__items select {
+    padding: var(--spacyng-8);
+    padding-right: var(--spacyng-68);
+    margin-left: var(--spacyng-8);
+    border-radius: 5px;
+
+}
+
+#crud__name {
+    max-width: 590px;
+}
+.crud__items input {
+    border: none;
+    border-bottom: 2px solid var(--primary-solid);
+     
+}
+.crud__items textarea {
+    max-width: 100%;
+    padding: var(--spacyng-12);
+}
+#crud__image {
+    border: none;
+    padding-right: var(--spacyng-68);
+    width: 600px;
+}
+
+.crud__items  button {
+    width: 175px;
+    background-color: var(--primary-solid);
+    color: var(--light-font-solid);
+    border: none;
+    font-size: var(--font-xsmall);
+    padding: var(--spacyng-12);
+    margin-right: var(--spacyng-36);
+}
+
+.crud__items section {
+    display: inline-flex;
+    gap: var(--spacyng-24);
+    width: 100%;
+}
+
+.crud__items section picture {
+    max-width: 150px;
+   
+    
+}
+
+.crud__items  picture p {
+    text-align: center;
+    border-top: 2px solid var(--primary-solid);
+}
+
+.crud__items a {
+    display: inline-flex;
+    gap: var(--spacyng-24);
+    width: 100%;
+    font-size: var(--font-xsmall);
+    color: var(--secondary-solid);
+    font-weight: 700;
+}
+
+/* <------------------ LOGIN CSS ------------------> */
+
+.login__container{
+    display: grid;
+    max-width: 1fr;
+    max-height: 289px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr;
+    justify-items: center;
+    grid-template-areas:
+    "tittle"
+    "cuerpo";
+
+    /*background-color: blue;*/
+}
+
+.login__tittle{
+    font-family: var(--alternative-font);
+    font-size: 42px;
+    text-align: center;
+    grid-area: tittle;
+    align-self: center;
+
+}
+
+.login__form{
+    grid-area: cuerpo;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 0.5fr;
+    grid-template-areas:
+    "textoemail email"
+    "textocontraseña contraseña"
+    "boton boton";
+    justify-items: center;
+    align-items: center;
+    row-gap:29px;
+    max-width: 383px;
+
+    /*background-color: violet;*/
+}
+
+/*>>>>>>>>>>>>>>>>>>> EMAIL Y CONTRASEÑA <<<<<<<<<<<<<<<< */
+
+.login__textemail{
+    grid-area: textoemail;
+    justify-self: start;
+
+    font-family: var(--base-font);
+    max-width: 850px;
+    font-size: 24px;
+
+}
+
+.login__email{
+    grid-area: email;
+    justify-self: end;
+    border: none;
+    max-width: 209px;
+    color: #E0E0E0;
+    font-size: 19px;
+    border-bottom: 2px solid var(--primary-solid);
+
+}
+
+.login__textpass{
+    grid-area: textocontraseña;
+    justify-self: start;
+
+    font-family: var(--base-font);
+    max-width: 850px;
+    font-size: 24px;
+}
+
+.login__pass{
+    grid-area: contraseña;
+    justify-self: end;
+    border: none;
+    color: #E0E0E0;
+    font-size: 60px;
+    max-width: 209px;
+    max-height: 20px;
+    border-bottom: 2px solid var(--primary-solid);
+}
+
+/*>>>>>>>>>>>>>>>>>>> BOTON <<<<<<<<<<<<<<<< */
+.login__button{
+    grid-area: boton;
+    display: grid;
+    max-width: 273px;
+    max-height: 78px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "ingresar   recordar"
+    "olvide     olvide";
+
+    justify-items: center;
+    /*background-color: yellow;*/
+}
+
+.login__button button{
+    grid-area: ingresar;
+    max-height: 39px;
+    width: 103px;
+    background-color: var(--primary-solid);
+    color: var(--light-font-solid);
+    border: none;
+    font-size: 12px;
+    padding: var(--spacyng-12);
+    margin-right: var(--spacyng-36);
+}
+
+.login__remember{
+    grid-area: recordar;
+    max-width: 130px;
+    max-height: 78px;
+    display: grid;
+    justify-items: center;
+    grid-template-areas: 
+    "boton texto";
+
+    gap: 10px;
+    align-items: center;
+
+    /*background-color: green;*/
+}
+
+.login__remember input{
+    grid-area: boton;
+}
+
+.login__remember p{
+    grid-area: texto;
+    font-family: var(--base-font);
+    font-size: 18px;
+}
+
+.login__forget{
+    grid-area: olvide;
+    align-self: center;
+    color: var( --secondary-solid);
+}
+
+/* <------------------ FIN LOGIN CSS ------------------> */

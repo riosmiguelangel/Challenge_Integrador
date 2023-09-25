@@ -5,88 +5,99 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create | Funkoshop</title>
+    <link rel="stylesheet" href="../../css/create.css">
 </head>
 <body>
     <header><!-- inicio header-->
-        <nav>
-            <picture>
-                <a href="../index.html">
+        <nav class="navbar container">
+            <picture class="navbar__logo">
+                <a href="../../index.html">
                     <img src="../../img/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funkoshop">
                 </a>
             </picture>
-            <ul>
-                <li>
-                    <a href="../views/shop.html">VER TIENDA</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a class="navbar__link" href="../../index.html">VER TIENDA</a>
                 </li>
-                <li>
-                    <a href="./views/contact.html">ADMIN</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./admin.html">ADMIN</a>
                 </li>
-                <li>
-                    <a href="./views/login.html">SALIR</a></li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="">SALIR</a>
+                </li>
             </ul>  
         </nav>
     </header><!-- fin header-->
-    <main>
-        <h3>CREAR NUEVO ITEM</h3>
-        <form action="">
-            <label for="">Categoria:</label>
-            <select name="" id="" >
-                <option value="" disabled selected hidden>Selecionar</option>
-                <option value="figuras">Figuras</option>
-                <option value="remeras">Remeras</option>
-                <option value="llaveros">Llaveros</option>
-            </select>
-            <label for="">Licencia:</label>
-            <select name="" id="" >
-                <option value="" disabled selected hidden>Selecionar</option>
-                <option value="STAR WARS">STAR WARS</option>
-                <option value="POKEMON">POKEMON</option>
-                <option value="HARRY POTTER">HARRY POTTER</option>
-            </select>   
-            <label for="">Nombre del producto:</label>         
-            <input type="text" placeholder="Kakashi Hatake Shippuden Saga">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Descripción del producto"></textarea>
-            <label for="">SKU:</label>
-            <input type="text" placeholder="SSK11AB001">
-            <label for="">Precio:</label>
-            <input type="text" placeholder="$ 0.000,00">
-            <label for="">Stock:</label>
-            <input type="text" placeholder="0">
-            <label for="">Descuento:</label>
-            <input type="text" placeholder="0%">
-            <label for="">Cuotas:</label>
-            <select name="" id="">
-                <option value="3">3 Cuotas sin interes</option>
-            </select>
-            <label for="">Imágenes:</label>
-            <input type="file">
-            <button type="submit">Agrega Producto</button>
-            <button type="reset">Limpiar</button>
-        </form>
+    <main class="container">
+        <section class="crud-container">
+            <h3 class="crud__title">CREAR NUEVO ITEM</h3>
+            <form class="crud__items" action="">
+                <!--<article class="crud__categoria">-->
+                    <label for="">Categoria:
+                    <select name="" id="" >
+                        <option value="" disabled selected hidden>Selecionar</option>
+                        <option value="figuras">Figuras</option>
+                        <option value="remeras">Remeras</option>
+                        <option value="llaveros">Llaveros</option>
+                    </select></label>
+                <!--</article>-->
+                
+                <label for="">Licencia:
+                <select name="" id="" >
+                    <option value="" disabled selected hidden>Selecionar</option>
+                    <option value="STAR WARS">STAR WARS</option>
+                    <option value="POKEMON">POKEMON</option>
+                    <option value="HARRY POTTER">HARRY POTTER</option>
+                </select></label>   
+                <label id="crud__name" for="">Nombre del producto:         
+                <input type="text" placeholder="Kakashi Hatake Shippuden Saga"></label>
+                <textarea name="" id="" cols="150" rows="10" placeholder="Descripción del producto"></textarea>
+                <label for="">SKU:
+                <input type="text" placeholder="SSK11AB001"></label>
+                <label for="">Precio:
+                <input type="text" placeholder="$ 0.000,00"></label>
+                <label for="">Stock:
+                <input type="text" placeholder="0"></label>
+                <label for="">Descuento:
+                <input type="text" placeholder="0%"></label>
+                <label for="">Cuotas:
+                <select name="" id="">
+                    <option value="3">3 Cuotas sin interes</option>
+                </select></label>
+                <label  for="">Imágenes:
+                <input id="crud__image" type="file"></label>
+                <div>
+                    <button type="submit">Agrega Producto</button>
+                    <button type="reset">Limpiar</button> 
+                </div>
+                
+            </form>            
+        </section>
+
     </main>
     <footer class="footer">
-        <nav>
-            <ul>
-                <li>
-                    <a href="./views/shop.html">SHOP</a>
+        <nav class="navbar container">
+            <ul class="navbar__items">
+                <li class="navbar_item">
+                    <a class="navbar__link" href="../../pages/shop/shop.html">SHOP</a>
                 </li>
-                <li>
-                    <a href="./views/register.html">REGISTRARSE</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./register.html">REGISTRARSE</a>
                 </li>
-                <li>
-                    <a href="./views/login.html">LOGIN</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./login.html">LOGIN</a>
                 </li>
-                <li>
-                    <a href="./views/contact.html">CONTACTO</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./views/contact.html">CONTACTO</a>
                 </li>
             </ul>  
             <picture>
-                <a href="./index.html">
+                <a href="../../index.html">
                     <img src="../../img/branding/isotype.svg" alt="Isologotipo de la marca Funkoshop">
                 </a>                                
             </picture>
         </nav>
-        <p>All rights reserved 2023 - Funkoshop &copy;</p>
+    <p class="navbar__copy">All rights reserved 2023 - Funkoshop &copy;</p>
     </footer>
 
 </body>
