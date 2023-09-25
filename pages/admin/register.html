@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Register | Funkoshop</title>
     <link rel="stylesheet" href="../../css/register.css">
 </head>
+
 <body>
     <header><!-- inicio header-->
         <nav class="navbar container">
@@ -25,24 +27,42 @@
                 <li class="navbar__item">
                     <a class="navbar__link" href="">SALIR</a>
                 </li>
-            </ul>  
+            </ul>
         </nav>
     </header><!-- fin header-->
-    <section class="section_container">
+    <section class="section_container container">
         <h1 class="section__crear">CREA TU CUENTA</h1>
         <H3 class="section__formulario">Completá el formulario para ser parte del mundo de los Funkos</H3>
-      <div class="section_datos">  
-        <p>Nombre: <input type="text" class="line_1"></input></p>
-        <p>Apellido: <input type="text" class="line_2"></input></p>
-        <p>Email: <input type="text" class="line_3"></input></p>
-        <p>Contraseña: <input type="text" class="line_4"></input></p>
-        <p>Repita contraseña: <input type="text" class="line_5"></input></p>
-    
-        <button class="boton_registro" onclick="" id="" >Registrar</button>
-        <input type="checkbox" name="recordarme" class="marcar_check" id="">
-        <lavel class="acepto">Acepto </lavel><lavel class="condiciones">Términos y condiciones</lavel>
-    </div>
-    
+
+        <class="section__datos">
+            <form class="datos_form">
+                <label>Nombre:</label>
+                <input  class="line_1" type="name" placeholder="Nombre">
+            </form>
+            <form class="datos_form">
+                <label>Apellido:</label>
+                <input class="line_2" type="lastname" placeholder="Apellido" >
+            </form>
+            <form class="datos_form">
+                <label>Email:</label>
+                <input class="line_3" type="email" placeholder="email@hotmail.com">
+            </form>
+            <form class="datos_form">
+                <label>Contraseña:</label>
+                <input class="line_4" type="password" placeholder="*********" >
+            </form>
+            <form class="datos_form">
+                <label>Repita contraseña:</label>
+                <input class="line_5" type="password" placeholder="*********">
+            </form>
+            <div class="datos__registrar">
+                <button type="submit" id="" class="boton_registro">Registrar</button>
+                <input type="checkbox" name="recordarme" class="marcar_check" id="">
+                <lavel class="acepto">Acepto </lavel>
+                <lavel class="condiciones">Términos y condiciones</lavel>
+            </div>
+        
+
     </section>
     <footer class="footer">
         <nav class="navbar container">
@@ -59,15 +79,16 @@
                 <li class="navbar__item">
                     <a class="navbar__link" href="./views/contact.html">CONTACTO</a>
                 </li>
-            </ul>  
+            </ul>
             <picture>
                 <a href="../../index.html">
                     <img src="../../img/branding/isotype.svg" alt="Isologotipo de la marca Funkoshop">
-                </a>                                
+                </a>
             </picture>
         </nav>
-    <p class="navbar__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+        <p class="navbar__copy">All rights reserved 2023 - Funkoshop &copy;</p>
     </footer>
-    
+
 </body>
+
 </html>
