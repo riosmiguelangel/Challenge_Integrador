@@ -307,6 +307,7 @@
 .resumen__subtotal-box {
     display: flex;
     justify-content: space-between;
+    
 }
 
 .resumen__envio-box {
@@ -317,6 +318,8 @@
 .resumen__total-box {
     display: flex;
     justify-content: space-between;
+    border-top: var(--primary-solid) 2px solid;
+    padding-top: var(--spacyng-8);
 }
 
 .resumen__texto {
