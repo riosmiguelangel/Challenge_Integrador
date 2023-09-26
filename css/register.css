@@ -1,116 +1,115 @@
 @import url(.//index.css);
 
-
 .section_container{
-    display:flex;
-    width: 1440px;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 36px;
+    gap: var(--spacyng-36);
+    max-width: 1200px;
     
 }
 
 .section__crear{
-    color: #1f1f1f;
-    text-align: right;
+    color: var(--dark-solid);
     font-family: var(--alternative-font);
-    font-size: 42px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 1.68px;
+    font-size: var(--font-xlarge);
+    font-weight: 900;
+    margin-top: var(--spacyng-36);
     
-    
-
 }
 
 .section__formulario{
-    color: #1f1f1f;
-    text-align: right;
+    color: var(--dark-solid);
     font-family: var(--alternative-font);
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 1.28px;
+    font-size: var(--font-large);
     
+      
 }
 .section__datos{
-    
-    margin-bottom: 36px;
-    color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 650px;
     font-family: var(--base-font);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.96px;
+    padding: var(--spacyng-28);
+    gap: var(--spacyng-36);
     
+}
+.datos_form{
+    display: flex;
+    justify-content: space-between;
+}
 
+.datos_form label {
+    color: var(--dark-solid);
+    font-family: var(--base-font);
+    font-size: var(--font-large);
+    
 }
+
+.datos_registrar{
+    display: flex;
+    flex-direction: row;
+}
+
 .line_1, .line_2, .line_3, .line_4, .line_5{
-    width:208.6px;
+    
+    width:208px;
     height: 2px;
-    background:#f33;
     border: none;
-    border-bottom: 2px solido var(--primary-solid);
-    margin-bottom: 36px;  
-    
-    
+    border-bottom: 2px solid var(--primary-solid);
+    font-size: var(--font-medium);
+    padding: 12px;
+    margin-bottom: var(--spacyng-36); 
+   
     
 }
-.line_1, .line_2{
-    margin-left: 84px;
-}
-.line_3{
-    margin-left: 107px;
-}
-.line_4{
-    margin-left: 54px;
+
+::placeholder{
+    color: #B9B9B9;
 }
 
 .boton_registro{
     width: 102.995px;
     height: 39.062px;
     flex-shrink: 0;
-    background: #f33;
-    color:#fff;
+    background: var(--primary-solid);
+    color: var(--light-font-solid);
     border: none;
     font-family: var(--base-font);
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-right: 36px;
-    margin-bottom: 36px;
-
-
+    gap: var(--spacyng-36);
+    margin-right: var(--spacyng-36);
+    margin-bottom: var(--spacyng-36);
+    
 }
+
 .marcar_check{
     width: 16.275px;
     height: 16.275px;
     flex-shrink: 0;
     border-radius: 3px;
-    border: 2px solid #1f1f1f;
-    margin-bottom: 36px;
+    border: 2px solid var(--dark-solid);
+    margin-bottom: var(--spacyng-36);
 }
+
 .acepto{
-    color: #1f1f1f;
+    color: var(--dark-solid);
     font-family: var(--base-font);
-    font-size: 18px;
-    font-style: normal;
+    font-size: var(--font-medium);
     font-weight: 400;
-    line-height: normal;
+    
     
 }
 .condiciones{
-    color: #1d84b5;
+    color: var(--secondary-solid);
     font-family: var(--base-font);
-    font-size: 18px;
-    font-style: normal;
+    font-size: var(--font-medium);
     font-weight: 400;
-    line-height: normal;
+    
 
 }
 
