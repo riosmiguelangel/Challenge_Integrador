@@ -19,6 +19,7 @@
     
 }
 
+<<<<<<< HEAD
 .section__formulario{
     color: var(--dark-solid);
     font-family: var(--alternative-font);
@@ -27,12 +28,23 @@
       
 }
 .section__datos{
+=======
+.section__texto{
+    color: var(--dark-solid);
+    font-family: var(--alternative-font);
+    font-size: var(--font-large);  
+      
+}
+
+.formulario_container{
+>>>>>>> d0ca50a1b7e5de4a6e281d08324e87ffc63e5cc7
     display: flex;
     flex-wrap: wrap;
     max-width: 650px;
     font-family: var(--base-font);
     padding: var(--spacyng-28);
     gap: var(--spacyng-36);
+<<<<<<< HEAD
     
 }
 .datos_form{
@@ -50,25 +62,68 @@
 .datos_registrar{
     display: flex;
     flex-direction: row;
+=======
+     
+}
+
+.section__datos{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.datos{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.datos label {
+    color: var(--dark-solid);
+    font-family: var(--base-font);
+    font-size: var(--font-medium)  
+>>>>>>> d0ca50a1b7e5de4a6e281d08324e87ffc63e5cc7
 }
 
 .line_1, .line_2, .line_3, .line_4, .line_5{
     
+<<<<<<< HEAD
     width:208px;
+=======
+    width:195px;
+>>>>>>> d0ca50a1b7e5de4a6e281d08324e87ffc63e5cc7
     height: 2px;
     border: none;
     border-bottom: 2px solid var(--primary-solid);
     font-size: var(--font-medium);
+<<<<<<< HEAD
     padding: 12px;
     margin-bottom: var(--spacyng-36); 
    
     
 }
 
+=======
+    padding: 10px;
+    margin-bottom: var(--spacyng-36); 
+    
+}
+>>>>>>> d0ca50a1b7e5de4a6e281d08324e87ffc63e5cc7
 ::placeholder{
     color: #B9B9B9;
 }
 
+<<<<<<< HEAD
+=======
+.section__registrar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--spacyng-36)
+}
+
+>>>>>>> d0ca50a1b7e5de4a6e281d08324e87ffc63e5cc7
 .boton_registro{
     width: 102.995px;
     height: 39.062px;
@@ -81,9 +136,14 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+<<<<<<< HEAD
     gap: var(--spacyng-36);
     margin-right: var(--spacyng-36);
     margin-bottom: var(--spacyng-36);
+=======
+    
+    
+>>>>>>> d0ca50a1b7e5de4a6e281d08324e87ffc63e5cc7
     
 }
 
@@ -93,13 +153,22 @@
     flex-shrink: 0;
     border-radius: 3px;
     border: 2px solid var(--dark-solid);
+<<<<<<< HEAD
     margin-bottom: var(--spacyng-36);
+=======
+    margin-left: var(--spacyng-36);
+    
+>>>>>>> d0ca50a1b7e5de4a6e281d08324e87ffc63e5cc7
 }
 
 .acepto{
     color: var(--dark-solid);
     font-family: var(--base-font);
+<<<<<<< HEAD
     font-size: var(--font-medium);
+=======
+    font-size: var(--font-xsmall);
+>>>>>>> d0ca50a1b7e5de4a6e281d08324e87ffc63e5cc7
     font-weight: 400;
     
     
@@ -107,7 +176,11 @@
 .condiciones{
     color: var(--secondary-solid);
     font-family: var(--base-font);
+<<<<<<< HEAD
     font-size: var(--font-medium);
+=======
+    font-size: var(--font-xsmall);
+>>>>>>> d0ca50a1b7e5de4a6e281d08324e87ffc63e5cc7
     font-weight: 400;
     
 
