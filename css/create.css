@@ -1,9 +1,7 @@
 @import url(.//index.css);
 
-
 .crud-container {
     margin-top:var(--spacyng-28) ;
-    /*display: flex;*/
 }
 
 .crud__title {
@@ -31,7 +29,7 @@
     padding-right: var(--spacyng-68);
     margin-left: var(--spacyng-8);
     border-radius: 5px;
-
+    width: 250px;
 }
 
 #crud__name {
@@ -40,16 +38,25 @@
 .crud__items input {
     border: none;
     border-bottom: 2px solid var(--primary-solid);
-     
+    font-size: 18px; 
 }
 .crud__items textarea {
     max-width: 100%;
     padding: var(--spacyng-12);
 }
+
+.crud__items div {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 660px;
+    justify-content: space-between;
+    padding: var(--spacyng-12) 0 ;
+    gap: var(--spacyng-28);
+}
 #crud__image {
     border: none;
     padding-right: var(--spacyng-68);
-    width: 600px;
+    width: 00px;
 }
 
 .crud__items  button {

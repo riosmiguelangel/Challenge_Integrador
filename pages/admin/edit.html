@@ -45,36 +45,38 @@
                     <option value="STAR WARS">STAR WARS</option>
                     <option value="POKEMON">POKEMON</option>
                     <option value="HARRY POTTER">HARRY POTTER</option>
-                </select></label>   
+                </select></label>
                 <label for="">Nombre del producto:         
                 <input type="text" placeholder="Kakashi Hatake Shippuden Saga"></label>
                 <textarea name="" id="" cols="150" rows="10" placeholder="Descripción del producto"></textarea>
-                <label for="">SKU:
-                <input type="text" placeholder="SSK11AB001"></label>
-                <label for="">Precio:
-                <input type="text" placeholder="$ 0.000,00"></label>
-                <label for="">Stock:
-                <input type="text" placeholder="0"></label>
-                <label for="">Descuento:
-                <input type="text" placeholder="0%"></label>
-                <label for="">Cuotas:
-                <select name="" id="">
-                    <option value="3">3 Cuotas sin interes</option>
-                </select></label>
-                <label for="">Imágenes:
-                <input id="crud__image" type="file"></label>
-                    <section>
-                        <picture>
-                            <img src="../../img/pokemon/pidgeotto-1.webp" alt="">
-                            <p>Frente</p>
-                        </picture>
-                        <picture>
-                            <img src="../../img/pokemon/pidgeotto-box.webp" alt="">
-                            <p>Dorso</p>
-                        </picture>    
-                    </section>
-                    
-                <button type="submit">Modificar Producto</button>
+                <div>
+                    <label for="">SKU:</label>
+                    <input type="text" placeholder="SSK11AB001" size="8px">
+                    <label for="">Precio:</label>
+                    <input type="text" placeholder="$ 0.000,00" size="8px">
+                    <label for="">Stock:</label>
+                    <input type="text" placeholder="0" size="3px">
+                    <label for="">Descuento:</label>
+                    <input type="text" placeholder="0%" size="3px">
+                    <label for="">Cuotas:</label>
+                    <select name="" id="">
+                        <option value="3">3 Cuotas sin interes</option>
+                    </select>
+                    <label for="">Imágenes:</label>
+                    <input id="crud__image" type="file">
+                        <section>
+                            <picture>
+                                <img src="../../img/pokemon/pidgeotto-1.webp" alt="">
+                                <p>Frente</p>
+                            </picture>
+                            <picture>
+                                <img src="../../img/pokemon/pidgeotto-box.webp" alt="">
+                                <p>Dorso</p>
+                            </picture>    
+                        </section>
+                        
+                    <button type="submit">Modificar Producto</button>
+                </div>
             </form>
         </section>
     </main>
@@ -91,7 +93,7 @@
                     <a class="navbar__link" href="./login.html">LOGIN</a>
                 </li>
                 <li class="navbar__item">
-                    <a class="navbar__link" href="./views/contact.html">CONTACTO</a>
+                    <a class="navbar__link" href="">CONTACTO</a>
                 </li>
             </ul>  
             <picture>

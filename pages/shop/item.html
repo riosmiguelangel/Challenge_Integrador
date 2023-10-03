@@ -13,13 +13,13 @@
     <header><!-- Inicio Header -->
         <nav class="navbar container">
             <picture class="navbar__logo">
-                <a href="../index.html">
+                <a href="../../index.html">
                     <img src="../../img/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funkoshop">
                 </a>
             </picture>
             <ul class="navbar__menu">
                 <li class="navbar__item  with-submenu">
-                    <a class="navbar__link with-icon" href="./pages/shop.html">Shop <iconify-icon
+                    <a class="navbar__link with-icon" href="./shop.html">Shop <iconify-icon
                             icon="ion:chevron-down"></iconify-icon></a>
                     <ul class="submenu">
                         <li class="submenu__item">
@@ -34,19 +34,20 @@
                     </ul>
                 </li>
                 <li class="navbar__item">
-                    <a class="navbar__link" href="./pages/contacto.html">Contacto</a>
+                    <a class="navbar__link" href="">Contacto</a>
                 </li>
                 <li class="navbar__item">
-                    <a class="navbar__link" href="./pages/login.html">Login</a>
+                    <a class="navbar__link" href="../admin/login.html">Login</a>
                 </li>
                 <li class="navbar__item">
-                    <a class="navbar__cart" href="./pages/cart.html">
+                    <a class="navbar__cart" href="./carrito.html">
                         <img src="../../img/icons/cart-icon.svg" alt="Carrito de compras">
                     </a>
                 </li>
             </ul>
         </nav>
     </header> <!-- Fin Header -->
+    <!-- Fin Header -->
 
     <main>
         <section class="item">
@@ -58,21 +59,25 @@
                 <h1 class="item__name">BABY YODA BLUEBALL</h1>
                 <p class="item__description">Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.</p>
                 <p class="item__price">$ 1799,99</p>
-            <div class="item__pay">
-                <input class="item__number" type="number" placeholder="0">
-                <button class="item__minmax">+</button>
-                <button class="item__minmax">-</button>
-                <button class="item__buy">Agregar al carrito</button>
-            </div>
-            <div class="item__paypromo">
+                <div class="cantidad">
+                    <div class="articulo__cantidad-box">
+                        <p class="articulo__cantidad-num">2</p>
+                    </div>
+                    <div class="boton">
+                        <button class="articulo__boton_sumar">+</button>
+                        <button class="articulo__boton_restar">-</button>
+                    </div>
+                    <button class="item__buy">Agregar al carrito</button>
+                </div>
+                <div class="item__paypromo">
                 <p class="item__paymethod">Ver métodos de pago </p>
-                <p class="item__promo"> - 3 CUOTAS SIN INTERÉS</p>
+                <p class="item__promo">&nbsp - 3 CUOTAS SIN INTERÉS</p>
             </div> 
-        </div>
+            </div>
         </section>
-
     </main>
 
+    <!--Inicio slider-->
     <section class="slider container">
         <h2 class="slider__title">Productos relacionados</h2>
         <ul class="slider__items">
@@ -135,30 +140,32 @@
             </li>
         </ul>
     </section>
+    <!--Fin slider-->
     
 <!--INICIO FOOTER-->
 <footer class="footer">
     <nav class="navbar container">
-        <ul class="navbar__item">
-            <li class="navbar__item">
-                <a class="navbar__link" href="./pages/shop/shop.html">SHOP</a>
+        <ul class="navbar__items">
+            <li class="navbar_item">
+                <a class="navbar__link" href="./shop.html">SHOP</a>
             </li>
             <li class="navbar__item">
-                <a class="navbar__link" href="./pages/admin/register.html">REGISTRARSE</a>
+                <a class="navbar__link" href="../admin/register.html">REGISTRARSE</a>
             </li>
             <li class="navbar__item">
-                <a class="navbar__link" href="./pages/admin/login.html">LOGIN</a>
+                <a class="navbar__link" href="../admin/login.html">LOGIN</a>
             </li>
             <li class="navbar__item">
-                <a class="navbar__link" href="./pages/contact.html">CONTACTO</a>
+                <a class="navbar__link" href="">CONTACTO</a>
             </li>
-        </ul>
+        </ul>  
         <picture>
-            <img src="../../img/branding/isotype.svg" alt="LOGO">
+            <a href="../../index.html">
+                <img src="../../img/branding/isotype.svg" alt="Isologotipo de la marca Funkoshop">
+            </a>                                
         </picture>
     </nav>
-    <p class="navbar__copy">All rights reserved 2023 - Funkoshop &copy;</p>
-
+<p class="navbar__copy">All rights reserved 2023 - Funkoshop &copy;</p>
 </footer>
 <!--FIN FOOTER-->
 
