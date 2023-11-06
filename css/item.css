@@ -1,4 +1,4 @@
-@import url(.//index.css);
+@import url("./index.css");
 
 /* ITEM */
 
@@ -28,13 +28,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.articulo__cantidad-num {
     font-family: var(--base-font);
     font-weight: 700;
     font-size: var(--font-large);
 }
+
+
 
 .articulo__boton_sumar {
     width: 18px;
@@ -70,8 +69,8 @@
     border: none;
     font-size: var(--font-xsmall);
     padding: var(--spacyng-12);
-    
-    margin-left: var(--spacyng-36);
+    margin-left: var(--spacyng-24);
+    cursor: pointer;
     
 }
 
@@ -87,7 +86,9 @@
 
 .item{
     
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
     gap: var(--spacyng-36);
     margin-left: var(--spacyng-128);
     gap: var(--spacyng-16);
@@ -110,9 +111,9 @@
     margin-bottom: var(--spacyng-8);
 }
 
-.item__content{
+/*.item__content{
     margin-top: var(--spacyng-128);
-}
+}*/
 
 .item__name{
     margin-top: var(--spacyng-12);

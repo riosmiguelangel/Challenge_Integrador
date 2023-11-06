@@ -165,6 +165,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: var(--base-font);
+    font-weight: 700;
+    font-size: var(--font-large);
+    
 }
 
 .articulo__cantidad-num {
@@ -184,6 +188,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
 
 }
 
@@ -198,6 +203,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
 }
 
 /* TOTAL */
