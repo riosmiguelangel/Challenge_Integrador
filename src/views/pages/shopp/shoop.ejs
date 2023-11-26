@@ -1,50 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop | Funkoshop</title>
-    <link rel="stylesheet" href="../../css/shop.css">
-</head>
+
+<%-include ('partials/shopPartials/headerShop') -%>
+
 <body>
-    <header><!-- Inicio Header -->
-        <nav class="navbar container">
-            <picture class="navbar__logo">
-                <a href="../../index.html">
-                    <img src="../../img/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funkoshop">
-                </a>
-            </picture>
-            <ul class="navbar__menu">
-                <li class="navbar__item  with-submenu">
-                    <a class="navbar__link with-icon" href="./shop.html">Shop <iconify-icon
-                            icon="ion:chevron-down"></iconify-icon></a>
-                    <ul class="submenu">
-                        <li class="submenu__item">
-                            <a href="" class="submenu__link">Funkos</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="" class="submenu__link">Remeras</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="" class="submenu__link">Llaveros</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="">Contacto</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="../admin/login.html">Login</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__cart" href="./carrito.html">
-                        <img src="../../img/icons/cart-icon.svg" alt="Carrito de compras">
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header> <!-- Fin Header -->
+
     <main id="shop" class="container">
         <aside class="shop__filters">
             <div id="shop-search">
@@ -80,6 +38,8 @@
         </aside>
         <section class="shop__content">
             <ul class="shop__items">
+                
+                <% products.forEach(Card => { %>
                 <li class="shop__item">
                     <article class="card-item">
                         <a class="card-item__link" href="">
@@ -99,7 +59,8 @@
                         </a>
                     </article>
                 </li>
-                <li class="shop__item">
+                <% }) %>
+                <!--<li class="shop__item">
                     <article class="card-item">
                         <a class="card-item__link" href="">
                             <picture class="card-item__cover">
@@ -250,7 +211,7 @@
                             </div>
                         </a>
                     </article>
-                </li>
+                </li>-->
             </ul>
             <div class="pagination">
                 <ul class="pagination__items">
@@ -271,30 +232,8 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <nav class="navbar container">
-            <ul class="navbar__items">
-                <li class="navbar_item">
-                    <a class="navbar__link" href="./shop.html">SHOP</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="../admin/register.html">REGISTRARSE</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="../admin/login.html">LOGIN</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="">CONTACTO</a>
-                </li>
-            </ul>  
-            <picture>
-                <a href="../../index.html">
-                    <img src="../../img/branding/isotype.svg" alt="Isologotipo de la marca Funkoshop">
-                </a>                                
-            </picture>
-        </nav>
-    <p class="navbar__copy">All rights reserved 2023 - Funkoshop &copy;</p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+
+    <%-include ('partials/shopPartials/footerShop') -%>
+   
 </body>
 </html>

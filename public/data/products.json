@@ -1,0 +1,52 @@
+{
+    "producto1": [
+        {
+            "product_id": 1,
+            "licence_name": "Pokemon",
+            "category_name": "Figuras coleccionables",
+            "product_name": "Pidgeotto",
+            "product_description": "Figura coleccionable pokemon",
+            "product_price": 1799.99,
+            "product_promo": "3 CUOTAS SIN INTERÉS",
+            "dues": 10,
+            "product_sku": "PKM001001",
+            "img_front": "../../img/pokemon/pidgeotto-1.webp",
+            "img_back": "../../img/pokemon/pidgeotto-box.webp"
+        }
+
+    ],
+    "producto2":[
+        {
+            "product_id": 2,
+            "licence_name": "Star Wars",
+            "category_name": "Figuras coleccionables",
+            "product_name": "Stormtrooper Lightsaber",
+            "product_description": "Figura coleccionable Star War",
+            "product_price": 1799.99,
+            "product_promo": "3 CUOTAS SIN INTERÉS",
+            "dues": 10,
+            "product_sku": "PKM001001",
+            "img_front": "../../img/star-wars/trooper-1.webp",
+            "img_back": "../../img/star-wars/trooper-box.webp"
+        }
+    ],
+    "producto3": [
+        {
+            "product_id": 3,
+            "licence_name": "Harry Potter",
+            "category_name": "Figuras coleccionables",
+            "product_name": "Luna Lovegood Lion Mask",
+            "product_description": "Figura coleccionable Harry Potter",
+            "product_price": 1799.99,
+            "product_promo": "3 CUOTAS SIN INTERÉS",
+            "dues": 10,
+            "product_sku": "PKM001001",
+            "img_front": "../../img/harry-potter/luna-1.webp",
+            "img_back": "../../img/harry-potter/luna-box.webp"
+        }
+    ]
+
+}
+    
+
+    

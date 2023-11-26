@@ -1,0 +1,35 @@
+<%-include ('partialsAdmin/login/headerLogin') -%>
+
+<body>
+
+
+    <main>
+        <section class="login__container">
+            <h3 class="login__tittle">INGRESAR A MI CUENTA</h3>
+           
+            <form class="login__form" action="" method="post">
+                <label class="login__textemail" for="">Email:</label>         
+                <input class="login__email" type="email" placeholder="Johndoe@correo.com">
+
+                <label class="login__textpass" for="">Contraseña:</label>         
+                <input class="login__pass" type="password" name="password" id="password" value="password" placeholder="">
+                
+                <article class="login__button">
+                    <button type="submit">ingresar</button>
+
+                    <label class="login__remember" for="">
+                        <input type="checkbox" name="recordarme" id="">
+                        <p>Recordarme</p>
+                    </label>
+
+                    <a class="login__forget" href="register.html">Olvide mi contraseña</a>
+
+                </article>
+            </form>
+        </section>
+    </main>
+
+       <%-include ('partialsAdmin/login/footerLogin') -%> 
+    
+</body>
+</html>
