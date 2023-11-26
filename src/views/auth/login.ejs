@@ -1,0 +1,54 @@
+<%- include('../partials/header') -%>
+<main>
+    <section class="login__container">
+        <h3 class="login__tittle">INGRESAR A MI CUENTA</h3>
+        
+        <form class="login__form" action="" method="post">
+            <label class="login__textemail" for="">Email:</label>         
+            <input class="login__email" type="email" placeholder="Johndoe@correo.com">
+
+            <label class="login__textpass" for="">Contraseña:</label>         
+            <input class="login__pass" type="password" name="password" id="password" value="password" placeholder="">
+            
+            <article class="login__button">
+                <button type="submit">ingresar</button>
+
+                <label class="login__remember" for="">
+                    <input type="checkbox" name="recordarme" id="">
+                    <p>Recordarme</p>
+                </label>
+
+                <a class="login__forget" href="register.html">Olvide mi contraseña</a>
+
+            </article>
+        </form>
+    </section>
+</main>
+
+    <footer class="footer">
+        <nav class="navbar container">
+            <ul class="navbar__items">
+                <li class="navbar_item">
+                    <a class="navbar__link" href="../../pages/shop/shop.html">SHOP</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./register.html">REGISTRARSE</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./login.html">LOGIN</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="">CONTACTO</a>
+                </li>
+            </ul>  
+            <picture>
+                <a href="../../index.html">
+                    <img src="../../img/branding/isotype.svg" alt="Isologotipo de la marca Funkoshop">
+                </a>                                
+            </picture>
+        </nav>
+    <p class="navbar__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+    </footer>
+    
+</body>
+</html>

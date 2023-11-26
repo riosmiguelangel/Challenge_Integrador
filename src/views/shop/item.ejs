@@ -1,0 +1,36 @@
+<%- include('../partials/header') -%>
+<main class="container">
+    <section class="item">
+        <picture class="item__img">
+            <img src="../../img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable de Baby Yoda">
+        </picture>
+        <div class="item__content">
+            <h4 class="item__licence">STARS WARS</h4>
+            <h1 class="item__name">BABY YODA BLUEBALL</h1>
+            <p class="item__description">Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición
+                limitada.</p>
+            <p class="item__price">$ 1799,99</p>
+            <div class="cantidad">
+
+                <input class="articulo__cantidad-box" type="text" name="quantity" placeholder="0"
+                    id="quantity">
+                <div class="boton">
+                    <button id="add" class="articulo__boton_sumar">+</button>
+                    <button id="subtract" class="articulo__boton_restar">-</button>
+                </div>
+                <a href="/shop/cart">
+                    <button class="item__buy">Agregar al carrito</button>
+                </a>
+            </div>
+            <div class="item__paypromo">
+                <p class="item__paymethod">Ver métodos de pago </p>
+                <p class="item__promo">&nbsp - 3 CUOTAS SIN INTERÉS</p>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="../../js/item.js"></script>
+<!--Inicio slider-->
+ <%- include('../components/slider') -%>
+<!--Fin slider-->
+<%- include('../partials/footer') -%>

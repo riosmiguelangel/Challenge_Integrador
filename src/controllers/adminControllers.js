@@ -1,5 +1,5 @@
 module.exports = {
-    adminView :(req, res) => res.send("Pagina de Admin"),
+    adminView :(req, res) => res.render("Pagina de Admin"),
     createView : (req, res) => res.send("Pagina de Create"),
     createItem : (req, res) => res.send("Pagina para crear un nuevo item a la base de datos"),
     editView : (req, res) => res.send("Pagina edit"),
