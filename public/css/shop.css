@@ -78,6 +78,13 @@
     font-size: 18px;
 }
 
+.shop__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: var(--spacing-36);
+}
+
 .shop__items {
     display: flex;
     flex-wrap: wrap;

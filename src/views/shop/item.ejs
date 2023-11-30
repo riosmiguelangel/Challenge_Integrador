@@ -2,16 +2,14 @@
 <main class="container">
     <section class="item">
         <picture class="item__img">
-            <img src="../../img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable de Baby Yoda">
+            <img src="../../img<%= item.image_front%>" alt="<%= item.product_description %>">
         </picture>
         <div class="item__content">
-            <h4 class="item__licence">STARS WARS</h4>
-            <h1 class="item__name">BABY YODA BLUEBALL</h1>
-            <p class="item__description">Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición
-                limitada.</p>
-            <p class="item__price">$ 1799,99</p>
+            <h4 class="item__licence"><%= item.licence_name %></h4>
+            <h1 class="item__name"><%= item.product_name %></h1>
+            <p class="item__description"><%= item.product_description %></p>
+            <p class="item__price">$ <%= item.price %></p>
             <div class="cantidad">
-
                 <input class="articulo__cantidad-box" type="text" name="quantity" placeholder="0"
                     id="quantity">
                 <div class="boton">
@@ -24,13 +22,14 @@
             </div>
             <div class="item__paypromo">
                 <p class="item__paymethod">Ver métodos de pago </p>
-                <p class="item__promo">&nbsp - 3 CUOTAS SIN INTERÉS</p>
+                <p class="item__promo">&nbsp - <%= item.dues %> CUOTAS SIN INTERÉS</p>
             </div>
         </div>
     </section>
+    <%- include('../components/slider') -%>
 </main>
 <script src="../../js/item.js"></script>
 <!--Inicio slider-->
- <%- include('../components/slider') -%>
+ <!--%- include('../components/slider') -%-->
 <!--Fin slider-->
 <%- include('../partials/footer') -%>
