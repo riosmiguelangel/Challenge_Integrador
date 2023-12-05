@@ -31,5 +31,3 @@ app.use((req, res, next) =>{
 });
 
 app.listen(PORT, () => console.log("Servidor corriendo en http://localhost:3000") ); 
-
-// ----------------- Linea de prueba para ver que todo esta bien (by Axel) ---------------------- //
