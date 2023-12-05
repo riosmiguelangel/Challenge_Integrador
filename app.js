@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const methodOverride = require('method-override');
 const path = require('path');
 require('dotenv').config();
 const PORT = process.env.PORT;
@@ -16,6 +17,8 @@ app.use(express.static('public'));
 
 app.use(express.urlencoded());
 app.use(express.json());
+
+app.use(methodOverride('_method'));
 
 /* Rutas de la aplicacion */
 

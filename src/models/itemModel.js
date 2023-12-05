@@ -14,7 +14,7 @@ const getAllItems = async() => {
 const getItem = async(id) => {
   try {
     const [rows] = await conn.query('SELECT * FROM product INNER JOIN licence ON product.licence_id= licence.licence_id where product_id='+ id + ';');
-    console.log(rows)
+    
     return rows
     
   }catch (error) {
@@ -25,8 +25,22 @@ const getItem = async(id) => {
 }
 
 
+const crearItem = async (params) => {
+	try {
+		const [creado] = await conn.query('INSERT INTO product SET ? ;', params)
+		return creado
+	} catch (error) {
+		throw error
+	} finally {
+		conn.releaseConnection()
+	}
+}
+
+
+
 module.exports = {
 	getAllItems,
 	getItem,
+  crearItem,
   
 }
