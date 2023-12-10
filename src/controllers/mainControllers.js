@@ -5,6 +5,8 @@ module.exports = {
     homeView:  async (req, res) => {
         const licences = await licenceModel.getAllItemLicence();
         const listaItems = await itemsModel.getAllItems();
+        const lastItems = await itemsModel.getLastItems();
+
         console.log(licences);
         res.render( 'index',{
           view: {
@@ -12,6 +14,7 @@ module.exports = {
           },
           collections: licences,
           items: listaItems,
+          sliderItems : lastItems,
         });
         console.log(licences);
       },

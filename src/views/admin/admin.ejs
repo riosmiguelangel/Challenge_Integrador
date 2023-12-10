@@ -28,7 +28,15 @@
                                 <td><%= item.product_name%></td>
                                 <td><%= item.licence_name%></td>
                                 <td><a href="/admin/edit/<%= item.product_id%>"><iconify-icon icon="material-symbols:edit" style="color: var(--secondary-solid);" width="34"></iconify-icon></a></td>
-                                <td><a href=""><iconify-icon icon="material-symbols:delete" style="color: var(--primary-solid);" width="34"></iconify-icon></a></td>
+                                <td>
+                                    <form action="/admin/delete/<%= item.product_id %>?_method=DELETE" method="POST">
+                                        <button  type="submit">
+                                            <!--iconify-icon icon="heroicons-solid:trash" style="color: #f33;"></iconify-icon-->
+                                            <iconify-icon icon="material-symbols:delete" style="color: var(--primary-solid);" width="34"></iconify-icon>
+                                        </button>
+                                    </form>
+                                </td>
+                                <!--td><a href="/admin/delete/<%= item.product_id%>"><iconify-icon icon="material-symbols:delete" style="color: var(--primary-solid);" width="34"></iconify-icon></a></td-->
                             </tr>
                         <% }); %>
 

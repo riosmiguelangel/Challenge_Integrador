@@ -24,6 +24,17 @@ const getItem = async(id) => {
     }
 }
 
+const getLastItems = async() => {
+    try {
+        const [rows] = await conn.query('SELECT product.*, category.category_name, licence.licence_name FROM (product LEFT JOIN category ON product.category_id = category.category_id) LEFT JOIN licence ON product.licence_id = licence.licence_id  ORDER BY product_id DESC LIMIT 5');
+         return rows
+    } catch (error) {
+		throw error
+	} finally {
+		conn.releaseConnection()
+    }
+}
+
 
 const crearItem = async (params) => {
 	try {
@@ -37,10 +48,58 @@ const crearItem = async (params) => {
 }
 
 
+const edit = async (params, id) => {
+	try {
+	  const [rows] = await conn.query('UPDATE product SET ? WHERE ?;', [params, id]);
+	  const response = {
+		isError: false,
+		message: `El item fue modificado exitosamente.`,
+		status: rows
+	  };
+  
+	  return response;
+	} catch (e) {
+	  const error = {
+		isError: true,
+		message: `No pudimos modificar el item seleccionado, error: ${e}`
+	  };
+  
+	  return error;
+	} finally {
+	  await conn.releaseConnection();
+	}
+  };
+
+  const deleteOne = async ( id) => {
+	try {
+	  const [rows] = await conn.query('DELETE FROM product WHERE product_id = ?;', [id]);
+	  console.log("modelo-rows",[rows])
+	  const response = {
+		isError: false,
+		data: rows,
+		message: `Item borrado exitosamente.`,
+		
+	  };
+	 
+	  return response;
+	} catch (e) {
+	  const error = {
+		isError: true,
+		message: `No pudimos insertar los valores seleccionados por: ${e}`
+	  };
+  
+	  return error;
+	} finally {
+	  await conn.releaseConnection();
+	}
+  }
+
 
 module.exports = {
 	getAllItems,
 	getItem,
-  crearItem,
-  
+  	crearItem,
+	edit,
+	delete : deleteOne,
+	getLastItems,
 }

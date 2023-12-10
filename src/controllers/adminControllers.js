@@ -2,14 +2,17 @@ const itemsModel = require('../models/itemModel');
 const licenceModel = require('../models/licenceModel');
 const categoryModel = require('../models/categoryModel');
 
+
 module.exports = {
     adminView:  async (req, res) => {
         const listaItems = await itemsModel.getAllItems();
+       
         res.render( './admin/admin',{
           view: {
             title: "Admin | Funkoshop",
           },
           items: listaItems,
+          
         });
       },
 
@@ -27,6 +30,7 @@ module.exports = {
     },
     createItem:  async (req, res) => {
         const item = req.body;
+        console.log(item)
         const itemSchema = {
           product_name: item.name,
           product_description: item.description,
@@ -49,7 +53,7 @@ module.exports = {
       const categories = await categoryModel.getAllItemCategory();
       const licences = await licenceModel.getAllItemLicence();
       const [item] = await itemsModel.getItem(id);
-      console.log(item)
+      //console.log(item)
       res.render( './admin/edit',{
         view: {
           title: `Edit Product #${id} | Funkoshop`,
@@ -61,29 +65,35 @@ module.exports = {
       
     }, 
 
-    editItem : async(req, res) => {
-      const item = req.body;
-      console.log(item, req.files);
-      /*const itemSchema = {
-        product_id : req.params.id,
-        product_name: req.body.name,
-        product_description: req.body.description,
-        price: req.body.price,
-        stock: req.body.stock,
-        discount: req.body.discount,
-        sku: req.body.sku,
-        dues: req.body.dues,
-        //image_front: '/imagen_front',
-        //image_back: '/imagen_front',
-        licence_id: req.body.collection,
-        category_id: req.body.category
+    editItem: async(req, res) => {
+      const id = req.params.id;
+      const  item = req.body;
+      console.log("item: ",item);
+      const itemSchema = {
+        product_name: item.name,
+        product_description: item.description,
+        price: item.price,
+        stock: item.stock,
+        discount: item.discount,
+        sku: item.sku,
+        dues: item.dues,
+        //image_front: '/'+req.files[0].filename,
+        //image_back: '/'+req.files[1].filename,
+        licence_id: item.collection,
+        category_id: item.category
       }
-      const mm= await ItemModel.edit(itemSchema, {product_id: id});
-      //await ItemsService.edit(item, id);*/
+      await itemsModel.edit(id);
       res.redirect('/admin');
+    },
 
-    } ,
+   
+    deleteItem:  async (req, res) => {
+      const id = req.params.id;
+      console.log(id)
+      await itemsModel.delete(id);
+      res.redirect('/admin');
+    },
     
     //res.send("Pagina para editar y cambiar producto seleccionado"),
-   deleteItem : (req, res) => res.send("Pagina para eliminar producto seleccionado"),
+   //deleteItem : (req, res) => res.send("Pagina para eliminar producto seleccionado"),
 };

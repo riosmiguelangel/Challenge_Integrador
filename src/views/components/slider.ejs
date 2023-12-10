@@ -2,22 +2,22 @@
     <h2 class="slider__title">Ultimos Lanzamientos</h2>
     <div class="glide__track" data-glide-el="track">
         <ul class="slider__items glide__slides">
-            <% items.forEach( item => { %>
+            <% sliderItems.forEach( sliderItem => { %>
                 <li class="shop__item">
                     <article class="card-item">
-                        <a class="card-item__link" href="/shop/item/<%= item.product_id%>">
+                        <a class="card-item__link" href="/shop/item/<%= sliderItem.product_id%>">
                             <picture class="card-item__cover">
                                 <span class="card-item__tag">Nuevo</span>
-                                <img class="card-item__img--front" src="../../img<%= item.image_front%>"
+                                <img class="card-item__img--front" src="../../img<%= sliderItem.image_front%>"
                                     alt="Figura coleccionable">
-                                <img class="card-item__img--back" src="../../img<%= item.image_back%>"
+                                <img class="card-item__img--back" src="../../img<%= sliderItem.image_back%>"
                                     alt="Figura coleccionable">
                             </picture>
                             <div class="card-item__content">
-                                <p class="card-item__licence"><%= item.licence_name%></p>
-                                <h4 class="card-item__name"><%= item.product_name%></h4>
-                                <p class="card-item__price"><%= item.price%></p>
-                                <p class="card-item__promo"><%= item.dues%> CUOTAS SIN INTERÉS</p>
+                                <p class="card-item__licence"><%= sliderItem.licence_name%></p>
+                                <h4 class="card-item__name"><%= sliderItem.product_name%></h4>
+                                <p class="card-item__price"><%= sliderItem.price%></p>
+                                <p class="card-item__promo"><%= sliderItem.dues%> CUOTAS SIN INTERÉS</p>
                             </div>
                         </a>
                     </article>

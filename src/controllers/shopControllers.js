@@ -4,11 +4,14 @@ module.exports = {
    
     shopView:  async (req, res) => {
         const listaItems = await itemsModel.getAllItems();
+        const lastItems = await itemsModel.getLastItems();
+
         res.render( './shop/shop',{
           view: {
             title: "Shop | Funkoshop",
           },
           items: listaItems,
+          sliderItems : lastItems,
         });
       },
 
@@ -16,6 +19,7 @@ module.exports = {
         const id = req.params.id;
         const [item] = await itemsModel.getItem(id);
         const listaItems = await itemsModel.getAllItems();
+        const lastItems = await itemsModel.getLastItems();
       
         res.render("./shop/item" ,{
             view:{
@@ -24,6 +28,7 @@ module.exports = {
             item : item,
             enableGlide: true,
             items: listaItems,
+            sliderItems : lastItems,
         });
     },
     
