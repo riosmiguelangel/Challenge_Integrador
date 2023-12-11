@@ -50,11 +50,14 @@ const crearItem = async (params) => {
 
 const edit = async (params, id) => {
 	try {
-	  const [rows] = await conn.query('UPDATE product SET ? WHERE ?;', [params, id]);
-	  const response = {
-		isError: false,
-		message: `El item fue modificado exitosamente.`,
-		status: rows
+	  	console.log("modelo: " ,params, id); 
+		const [rows] = await conn.query('UPDATE product SET ? WHERE ?;', [params, {product_id: id}]);
+		console.log("despues",[rows], params);
+		console.log("Hola");
+	  	const response = {
+			isError: false,
+			message: `El item fue modificado exitosamente.`,
+			status: rows,
 	  };
   
 	  return response;

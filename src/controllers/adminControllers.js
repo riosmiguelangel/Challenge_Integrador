@@ -53,7 +53,6 @@ module.exports = {
       const categories = await categoryModel.getAllItemCategory();
       const licences = await licenceModel.getAllItemLicence();
       const [item] = await itemsModel.getItem(id);
-      //console.log(item)
       res.render( './admin/edit',{
         view: {
           title: `Edit Product #${id} | Funkoshop`,
@@ -62,27 +61,25 @@ module.exports = {
         categories : categories,
         licences: licences,
       });
-      
+
     }, 
 
-    editItem: async(req, res) => {
+    editItem: async (req, res) => {
       const id = req.params.id;
-      const  item = req.body;
-      console.log("item: ",item);
+      const item = req.body;
       const itemSchema = {
         product_name: item.name,
         product_description: item.description,
         price: item.price,
         stock: item.stock,
         discount: item.discount,
-        sku: item.sku,
         dues: item.dues,
         //image_front: '/'+req.files[0].filename,
         //image_back: '/'+req.files[1].filename,
         licence_id: item.collection,
         category_id: item.category
       }
-      await itemsModel.edit(id);
+      await itemsModel.edit(itemSchema,id);
       res.redirect('/admin');
     },
 
@@ -93,7 +90,4 @@ module.exports = {
       await itemsModel.delete(id);
       res.redirect('/admin');
     },
-    
-    //res.send("Pagina para editar y cambiar producto seleccionado"),
-   //deleteItem : (req, res) => res.send("Pagina para eliminar producto seleccionado"),
 };
