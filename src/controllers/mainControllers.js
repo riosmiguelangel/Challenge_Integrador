@@ -7,7 +7,7 @@ module.exports = {
         const listaItems = await itemsModel.getAllItems();
         const lastItems = await itemsModel.getLastItems();
 
-        console.log(licences);
+        //console.log(licences);
         res.render( 'index',{
           view: {
             title: "Home | Funkoshop",
@@ -16,7 +16,7 @@ module.exports = {
           items: listaItems,
           sliderItems : lastItems,
         });
-        console.log(licences);
+        //console.log(licences);
       },
 
 
