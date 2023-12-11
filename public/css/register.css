@@ -19,6 +19,18 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+.section__formulario{
+    color: var(--dark-solid);
+    font-family: var(--alternative-font);
+    font-size: var(--font-large);
+    
+      
+}
+.section__datos{
+=======
+=======
+>>>>>>> e46870911ed52e86a9287401f88945fa3c30b49f
 .section__texto{
     color: var(--dark-solid);
     font-family: var(--alternative-font);
@@ -27,6 +39,9 @@
 }
 
 .formulario_container{
+<<<<<<< HEAD
+>>>>>>> d0ca50a1b7e5de4a6e281d08324e87ffc63e5cc7
+=======
 =======
 .section__formulario{
     color: var(--dark-solid);
@@ -37,6 +52,7 @@
 }
 .section__datos{
 >>>>>>> f4cf5afba9ff0f07cc596ae55f7dab04d86fec78
+>>>>>>> e46870911ed52e86a9287401f88945fa3c30b49f
     display: flex;
     flex-wrap: wrap;
     max-width: 650px;
@@ -44,6 +60,27 @@
     padding: var(--spacyng-28);
     gap: var(--spacyng-36);
 <<<<<<< HEAD
+<<<<<<< HEAD
+    
+}
+.datos_form{
+    display: flex;
+    justify-content: space-between;
+}
+
+.datos_form label {
+    color: var(--dark-solid);
+    font-family: var(--base-font);
+    font-size: var(--font-large);
+    
+}
+
+.datos_registrar{
+    display: flex;
+    flex-direction: row;
+=======
+=======
+>>>>>>> e46870911ed52e86a9287401f88945fa3c30b49f
      
 }
 
@@ -63,6 +100,9 @@
     color: var(--dark-solid);
     font-family: var(--base-font);
     font-size: var(--font-medium)  
+<<<<<<< HEAD
+>>>>>>> d0ca50a1b7e5de4a6e281d08324e87ffc63e5cc7
+=======
 =======
     
 }
@@ -82,37 +122,61 @@
     display: flex;
     flex-direction: row;
 >>>>>>> f4cf5afba9ff0f07cc596ae55f7dab04d86fec78
+>>>>>>> e46870911ed52e86a9287401f88945fa3c30b49f
 }
 
 .line_1, .line_2, .line_3, .line_4, .line_5{
     
 <<<<<<< HEAD
+<<<<<<< HEAD
+    width:208px;
+=======
+    width:195px;
+>>>>>>> d0ca50a1b7e5de4a6e281d08324e87ffc63e5cc7
+=======
     width:195px;
 =======
     width:208px;
 >>>>>>> f4cf5afba9ff0f07cc596ae55f7dab04d86fec78
+>>>>>>> e46870911ed52e86a9287401f88945fa3c30b49f
     height: 2px;
     border: none;
     border-bottom: 2px solid var(--primary-solid);
     font-size: var(--font-medium);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
     padding: 10px;
     margin-bottom: var(--spacyng-36); 
     
 }
 =======
+>>>>>>> e46870911ed52e86a9287401f88945fa3c30b49f
     padding: 12px;
     margin-bottom: var(--spacyng-36); 
    
     
 }
 
+<<<<<<< HEAD
+=======
+    padding: 10px;
+    margin-bottom: var(--spacyng-36); 
+    
+}
+>>>>>>> d0ca50a1b7e5de4a6e281d08324e87ffc63e5cc7
+=======
 >>>>>>> f4cf5afba9ff0f07cc596ae55f7dab04d86fec78
+>>>>>>> e46870911ed52e86a9287401f88945fa3c30b49f
 ::placeholder{
     color: #B9B9B9;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> e46870911ed52e86a9287401f88945fa3c30b49f
 .section__registrar{
     display: flex;
     flex-direction: row;
@@ -121,8 +185,12 @@
     margin-bottom: var(--spacyng-36)
 }
 
+<<<<<<< HEAD
+>>>>>>> d0ca50a1b7e5de4a6e281d08324e87ffc63e5cc7
+=======
 =======
 >>>>>>> f4cf5afba9ff0f07cc596ae55f7dab04d86fec78
+>>>>>>> e46870911ed52e86a9287401f88945fa3c30b49f
 .boton_registro{
     width: 102.995px;
     height: 39.062px;
@@ -136,6 +204,15 @@
     font-weight: 400;
     line-height: normal;
 <<<<<<< HEAD
+<<<<<<< HEAD
+    gap: var(--spacyng-36);
+    margin-right: var(--spacyng-36);
+    margin-bottom: var(--spacyng-36);
+=======
+    
+    
+>>>>>>> d0ca50a1b7e5de4a6e281d08324e87ffc63e5cc7
+=======
     
     
 =======
@@ -143,6 +220,7 @@
     margin-right: var(--spacyng-36);
     margin-bottom: var(--spacyng-36);
 >>>>>>> f4cf5afba9ff0f07cc596ae55f7dab04d86fec78
+>>>>>>> e46870911ed52e86a9287401f88945fa3c30b49f
     
 }
 
@@ -153,21 +231,36 @@
     border-radius: 3px;
     border: 2px solid var(--dark-solid);
 <<<<<<< HEAD
+<<<<<<< HEAD
+    margin-bottom: var(--spacyng-36);
+=======
+    margin-left: var(--spacyng-36);
+    
+>>>>>>> d0ca50a1b7e5de4a6e281d08324e87ffc63e5cc7
+=======
     margin-left: var(--spacyng-36);
     
 =======
     margin-bottom: var(--spacyng-36);
 >>>>>>> f4cf5afba9ff0f07cc596ae55f7dab04d86fec78
+>>>>>>> e46870911ed52e86a9287401f88945fa3c30b49f
 }
 
 .acepto{
     color: var(--dark-solid);
     font-family: var(--base-font);
 <<<<<<< HEAD
+<<<<<<< HEAD
+    font-size: var(--font-medium);
+=======
+    font-size: var(--font-xsmall);
+>>>>>>> d0ca50a1b7e5de4a6e281d08324e87ffc63e5cc7
+=======
     font-size: var(--font-xsmall);
 =======
     font-size: var(--font-medium);
 >>>>>>> f4cf5afba9ff0f07cc596ae55f7dab04d86fec78
+>>>>>>> e46870911ed52e86a9287401f88945fa3c30b49f
     font-weight: 400;
     
     
@@ -176,10 +269,17 @@
     color: var(--secondary-solid);
     font-family: var(--base-font);
 <<<<<<< HEAD
+<<<<<<< HEAD
+    font-size: var(--font-medium);
+=======
+    font-size: var(--font-xsmall);
+>>>>>>> d0ca50a1b7e5de4a6e281d08324e87ffc63e5cc7
+=======
     font-size: var(--font-xsmall);
 =======
     font-size: var(--font-medium);
 >>>>>>> f4cf5afba9ff0f07cc596ae55f7dab04d86fec78
+>>>>>>> e46870911ed52e86a9287401f88945fa3c30b49f
     font-weight: 400;
     
 
