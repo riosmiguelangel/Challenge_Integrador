@@ -1,5 +1,5 @@
 
-<%-include ('partials/shopPartials/headerShop') -%>
+<%-include ('partials/header') -%>
 
 <body>
 
@@ -39,7 +39,7 @@
         <section class="shop__content">
             <ul class="shop__items">
                 
-                <% products.forEach(Card => { %>
+                <% products.forEach(productshop => { %>
                 <li class="shop__item">
                     <article class="card-item">
                         <a class="card-item__link" href="">
@@ -233,7 +233,7 @@
         </section>
     </main>
 
-    <%-include ('partials/shopPartials/footerShop') -%>
+    <%-include ('partials/footer') -%>
    
 </body>
 </html>

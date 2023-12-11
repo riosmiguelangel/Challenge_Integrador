@@ -1,10 +1,10 @@
- <%-include ('partialsAdmin/edit/headerEdit') -%>
+ <%-include ('partials/header') -%>
 <body>    
 
     <main class="container">
         <section class="crud-container">
             <h3 class="crud__title">EDIT ITEM</h3>
-            <form class="crud__items" action="">
+            <form class="crud__items" action="./admin/edit/20?_method=PUT" method="POST" enctype="multipart/form-data">
                 <label for="">Categoria:
                 <select name="" id="" >
                     <option value="" disabled selected hidden>Selecionar</option>
@@ -35,8 +35,9 @@
                     <select name="" id="">
                         <option value="3">3 Cuotas sin interes</option>
                     </select>
-                    <label for="">Imágenes:</label>
-                    <input id="crud__image" type="file">
+                    <div class="crud_image_box">
+                        <label for="">Imágenes:</label>
+                        <input id="crud__image" type="file" name="image" id="image">
                         <section>
                             <picture>
                                 <img src="../../img/pokemon/pidgeotto-1.webp" alt="">
@@ -48,12 +49,13 @@
                             </picture>    
                         </section>
                         
-                    <button type="submit">Modificar Producto</button>
+                     <button type="submit">Modificar Producto</button>
+                    </div>
                 </div>
             </form>
         </section>
     </main>
 
-    <%-include ('partialsAdmin/edit/footerEdit') -%>
+    <%-include ('partials/footer') -%>
 </body>
 </html>

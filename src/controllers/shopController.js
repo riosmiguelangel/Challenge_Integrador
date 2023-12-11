@@ -1,20 +1,13 @@
-
+const models = require('../models/items.js')
 
 module.exports = {
-    shop: (req,res) => {
-        res.render('shoop', {
-            products: [
-                    "Card 1",
-                    "Card 2",
-                    "Card 3",
-                    "Card 4",
-                    "Card 5",
-                    "Card 6",
-                    "Card 7",
-                    "Card 8",
-                    "Card 9",
-            ]   
+    shop: async (req,res) => {
+        const productshop = await models.getItems()
+        res.render('shop', {
+            products: productshop  
         });},
+
+
     shopItemGet: (req,res) => res.render ('item'),
     shopItemPost: (req,res) => res.render('shopItemPost'),
     shopCart: (req,res) => {

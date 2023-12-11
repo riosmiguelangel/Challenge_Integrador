@@ -1,5 +1,5 @@
 /* LIST  */
-@import url(.//index.css);
+
 .list {
     padding-top:var(--spacyng-36);
     font-family: var(--base-font);
@@ -46,6 +46,7 @@
     border: none;
     background-color: var(--light-bg-solid);
     font-size: var(--font-large);
+    cursor: pointer;
 }
 
 .list__tabla {

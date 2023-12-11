@@ -1,4 +1,4 @@
-@import url(.//index.css);
+
 
 .crud-container {
     margin-top:var(--spacyng-28) ;
@@ -53,10 +53,12 @@
     padding: var(--spacyng-12) 0 ;
     gap: var(--spacyng-28);
 }
+
+
 #crud__image {
     border: none;
     padding-right: var(--spacyng-68);
-    width: 00px;
+    width: 00%;
 }
 
 .crud__items  button {
