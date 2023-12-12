@@ -5,6 +5,7 @@ const methodOverride = require('method-override');
 const path = require('path');
 require('dotenv').config();
 const PORT = process.env.PORT;
+const HOST = process.env.HOST;
 const session = require('express-session');
 
 const mainRoutes = require('./src/routes/mainRoutes');
@@ -49,4 +50,4 @@ app.use((req, res, next) =>{
     res.status(404).send('Recurso no encontrado');
 });
 
-app.listen(PORT, () => console.log("Servidor corriendo en http://localhost:3000") ); 
+app.listen(PORT, () => console.log(`Servidor corriendo en ${HOST} http://localhost:3000`) ); 
