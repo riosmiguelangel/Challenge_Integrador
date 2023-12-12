@@ -22,9 +22,8 @@ authLoginPost: async (req, res) => {
   const [valido] = await userModel.verificarUser(userLogin.email, userLogin.password)
   console.log("Login")
   console.log("valido: ",valido)
-  //res.redirect('../../home')
   if(valido === undefined){
-    res.redirect('../../login/?error=1')
+    res.redirect('/auth/login')
   } else if(await (userLogin.email != valido.email) && (userLogin.password != valido.password)){
     //else if(!(await crypt.compare(userLogin.email, valido.email) && crypt.compare(password, valido.password))){
     console.log(userLogin.email, valido.email, userLogin.password, valido.password)
@@ -32,6 +31,8 @@ authLoginPost: async (req, res) => {
   } else {
     console.log(valido.user_id)
     req.session.user_id = valido.user_id
+    return logueado= req.session.user_id,
+    console.log("logueado: ",logueado),
     res.redirect(`../../home?user_id=${valido.user_id}`)
   }
 },
@@ -55,13 +56,9 @@ await userModel.crearUsuario(userSchema)
 res.redirect('/home');
 },
 
-//authRegisterPost : (req, res) => { res.redirect('home')},
-
-/*authRegisterPost: async (req, res) => {
-  const creado = await userModel.crearUsuario(req.body.name, req.body.lastname, req.body.email, req.body.password)
-  res.redirect('home')
-},*/
-
-//authLogout : (req, res) => res.render('auth logout'),
+authLogout : (req, res) =>{
+  req.session.user_id = null,
+  res.redirect('../../home');
+},
 
 }

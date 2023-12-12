@@ -40,7 +40,7 @@ app.use(methodOverride('_method'));
 
 /* Rutas de la aplicacion */
 
-app.use('/home', mainRoutes);
+app.use('/home', isLogged, mainRoutes);
 app.use('/shop', isLogged, shopRoutes);
 app.use('/admin', adminRoutes);
 app.use('/auth', authRoutes);
