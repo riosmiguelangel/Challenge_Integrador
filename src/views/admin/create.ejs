@@ -1,0 +1,48 @@
+<%- include('../partials/header') -%>
+    <main class="container">
+        <section class="crud-container">
+            <h3 class="crud__title">CREAR NUEVO ITEM</h3>
+            <form class="crud__items" action="/admin/create" method="POST" enctype="multipart/form-data">
+                <label for="">Categoria:
+                    <select name="category" id="category" >
+                        <option value="" disabled selected hidden>Selecionar</option>
+                        <% categories.forEach((category, i) => { %>
+                            <option value="<%= i+1%>"><%= category.category_name%></option>
+                        <% }); %>                        
+                    </select></label>
+                <label for="">Licencia:
+                <select name="collection" id="collection" >
+                    <option value="" disabled selected hidden>Selecionar</option>
+                    <% licences.forEach( (licence, i )=> { %>
+                        <option value="<%= i+1%>"><%= licence.licence_name%></option>
+                    <% }); %>                                 
+                </select></label>   
+                <label id="" for="name">Nombre del producto:         
+                <input type="text" name="name" id="name" placeholder="Kakashi Hatake Shippuden Saga" size="30px"></label>
+                <textarea name="description" id="description" cols="150" rows="10" placeholder="Descripción del producto"></textarea>
+                <div>
+                    <label for="sku">SKU:</label>
+                    <input type="text" name="sku" id="sku" placeholder="SSK11AB001" size="8px">
+                    <label for="price">Precio:</label>
+                    <input type="text" name="price" id="price" placeholder="$ 0.000,00" size="8px">
+                    <label for="stock">Stock:</label>
+                    <input type="text" name="stock" id="stock" placeholder="0" size="3px">
+                    <label for="discount">Descuento:</label>
+                    <input type="text" name="discount" id="discount" placeholder="0%" size="3px">
+                    <label for="dues">Cuotas:
+                    <select name="dues" id="dues">
+                        <option value="3">3 Cuotas sin interes</option>
+                    </select></label>
+                    <label  for="images">Imágenes:
+                    <input id="img" type="file" name="images" multiple></label>
+                </div>
+                <div>
+                    <button type="submit">Agrega Producto</button>
+                    <button type="reset">Limpiar</button> 
+                </div>
+                
+            </form>            
+        </section>
+
+    </main>
+    <%- include('../partials/footer') -%>

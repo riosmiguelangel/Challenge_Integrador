@@ -1,0 +1,147 @@
+/* ITEM */
+
+/* Cantidad y agregar */
+
+.cantidad {
+    margin-top: var(--spacyng-28);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.boton {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    
+    
+}
+
+.articulo__cantidad-box {
+    border: 0.5px #C9C9C9;
+    width: 89.48px;
+    height: 40px;
+    border: 2px solid #C9C9C9;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--base-font);
+    font-weight: 700;
+    font-size: var(--font-large);
+}
+
+
+
+.articulo__boton_sumar {
+    width: 18px;
+    height: 16px;
+    padding: 4px, 0, 4px, 0;
+    background-color: #4F4F4F;
+    color: var(--light-font-solid);
+    gap: 2px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.articulo__boton_restar {
+    width: 18px;
+    height: 16px;
+    padding: 4px, 0, 4px, 0;
+    background-color: #4F4F4F;
+    color: var(--light-font-solid);
+    gap: 2px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item__buy {
+    width: 175px;
+    background-color: var(--primary-solid);
+    color: var(--light-font-solid);
+    border: none;
+    font-size: var(--font-xsmall);
+    padding: var(--spacyng-12);
+    margin-left: var(--spacyng-24);
+    cursor: pointer;
+    
+}
+
+/* Texto item */
+
+.item__paypromo{
+    margin-top: var(--spacyng-28);
+    display: flex;
+    color: var(--secondary-solid);
+    font-weight: bold;
+    font-size: xx-small;
+}
+
+.item{
+    
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: var(--spacyng-36);
+    margin-left: var(--spacyng-128);
+    gap: var(--spacyng-16);
+}
+
+.item__img{
+    max-width: 550px;
+    margin-top: var(--spacyng-28);
+}
+
+.item__licence{
+    font-size: var(--font-small);
+    margin-top: var(--spacyng-28);
+    margin-bottom: var(--spacyng-8);
+}
+
+.item__price{
+    font-size: var(--font-xlarge);
+    margin-top: var(--spacyng-16);
+    margin-bottom: var(--spacyng-8);
+}
+
+/*.item__content{
+    margin-top: var(--spacyng-128);
+}*/
+
+.item__name{
+    margin-top: var(--spacyng-12);
+    font-size: var(--font-xlarge);
+}
+
+.item__pay{
+    margin-top: var(--spacyng-28);
+    display: flex;
+}
+
+
+
+.item__paymethod{
+text-decoration: underline;
+}
+
+
+.item__number{
+    width: 100px;
+    height: 35px;
+    align-items: center;
+    border-radius: 0.5%;
+    font-family: var(--base-font);
+    font-size: var(--font-medium);
+    text-align: center;
+}
+
+.item__description{
+    width: 600px;
+    margin-top: var(--spacyng-16);
+}
+

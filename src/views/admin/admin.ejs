@@ -1,0 +1,50 @@
+<%- include('../partials/header') -%>
+    <main>
+        <section class="container">
+            <section class="search">
+                <button class="search__botton"><iconify-icon icon="material-symbols:search" width="42"></iconify-icon></BUtton></iconify-icon>
+                <input class="search__bar" type="text" placeholder="código, nombre o categoria">  
+            </section>
+            <article class="list__items">
+                <h3 class="list__title">LISTADO DE PRODUCTOS</h3>
+                <a  href="/admin/create"><button class="list__botton" type="button">AGREGAR<iconify-icon icon="material-symbols:add-box" style="color: var(--primary-solid);" width="52"></iconify-icon></button></a>
+            </article>
+                <table class="list__tabla">
+                    <thead>
+                        <tr>
+                            <th>ID</td>
+                            <th>Código</td>
+                            <th>Nombre del Producto</td>
+                            <th>Categoria</td>
+                            <th></td>
+                            <th></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% items.forEach( item => { %>
+                            <tr>
+                                <td><%= item.product_id%></td>
+                                <td><%= item.sku%></td>
+                                <td><%= item.product_name%></td>
+                                <td><%= item.licence_name%></td>
+                                <td><a href="/admin/edit/<%= item.product_id%>"><iconify-icon icon="material-symbols:edit" style="color: var(--secondary-solid);" width="34"></iconify-icon></a></td>
+                                <td>
+                                    <form action="/admin/delete/<%= item.product_id %>?_method=DELETE" method="POST">
+                                        <button  type="submit">
+                                            <!--iconify-icon icon="heroicons-solid:trash" style="color: #f33;"></iconify-icon-->
+                                            <iconify-icon icon="material-symbols:delete" style="color: var(--primary-solid);" width="34"></iconify-icon>
+                                        </button>
+                                    </form>
+                                </td>
+                                <!--td><a href="/admin/delete/<%= item.product_id%>"><iconify-icon icon="material-symbols:delete" style="color: var(--primary-solid);" width="34"></iconify-icon></a></td-->
+                            </tr>
+                        <% }); %>
+
+
+                    </tbody>
+                </table>
+        </section>
+        
+
+    </main>
+    <%- include('../partials/footer') -%>
