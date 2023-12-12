@@ -14,7 +14,6 @@ const getAllItems = async() => {
 const getItem = async(id) => {
   try {
     const [rows] = await conn.query('SELECT * FROM product INNER JOIN licence ON product.licence_id= licence.licence_id where product_id='+ id + ';');
-    
     return rows
     
   }catch (error) {
@@ -50,10 +49,7 @@ const crearItem = async (params) => {
 
 const edit = async (params, id) => {
 	try {
-	  	console.log("modelo: " ,params, id); 
 		const [rows] = await conn.query('UPDATE product SET ? WHERE ?;', [params, {product_id: id}]);
-		console.log("despues",[rows], params);
-		console.log("Hola");
 	  	const response = {
 			isError: false,
 			message: `El item fue modificado exitosamente.`,
@@ -76,7 +72,6 @@ const edit = async (params, id) => {
   const deleteOne = async ( id) => {
 	try {
 	  const [rows] = await conn.query('DELETE FROM product WHERE product_id = ?;', [id]);
-	  console.log("modelo-rows",[rows])
 	  const response = {
 		isError: false,
 		data: rows,

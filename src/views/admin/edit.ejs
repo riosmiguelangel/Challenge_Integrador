@@ -12,7 +12,7 @@
                 <label for="collection">Licencia:
                 <select name="collection" id="collection"  required>
                     <% licences.forEach((licence, i) => { %>
-                        <option <% if (item.licence_id === i +1) { %>selected<% } %> value="<%=i +2%>"><%= licence.licence_name%></option>
+                        <option <% if (item.licence_id === i +1) { %>selected<% } %> value="<%=i +1%>"><%= licence.licence_name%></option>
                     <% }); %>
                 </select></label>
                 <label for="">Nombre del producto:         

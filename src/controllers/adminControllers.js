@@ -79,14 +79,14 @@ module.exports = {
         licence_id: item.collection,
         category_id: item.category
       }
-      await itemsModel.edit(itemSchema,id);
+      const resultado = await itemsModel.edit(itemSchema,id);
+      console.log("Resultado: ", resultado);
       res.redirect('/admin');
     },
 
    
     deleteItem:  async (req, res) => {
       const id = req.params.id;
-      console.log(id)
       await itemsModel.delete(id);
       res.redirect('/admin');
     },

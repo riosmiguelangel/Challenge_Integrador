@@ -17,11 +17,7 @@ authLoginPost: async (req, res) => {
     email : req.body.email,
     password : req.body.password,
   }
-  console.log(userLogin)
-  console.log(userLogin.email)
   const [valido] = await userModel.verificarUser(userLogin.email, userLogin.password)
-  console.log("Login")
-  console.log("valido: ",valido)
   if(valido === undefined){
     res.redirect('/auth/login')
   } else if(await (userLogin.email != valido.email) && (userLogin.password != valido.password)){
@@ -29,10 +25,16 @@ authLoginPost: async (req, res) => {
     console.log(userLogin.email, valido.email, userLogin.password, valido.password)
     res.redirect('../../login/?error=1')
   } else {
-    console.log(valido.user_id)
     req.session.user_id = valido.user_id
-    return logueado= req.session.user_id,
-    console.log("logueado: ",logueado),
+    console.log(req.session.user_id)
+    if(req.session.user_id ==2){
+      console.log("usuario dos") 
+      const logueado = true
+      console.log(logueado)
+    } else {
+      console.log(req.session.user_id)}
+    //return logueado= req.session.user_id,
+    //console.log("logueado: ",logueado),
     res.redirect(`../../home?user_id=${valido.user_id}`)
   }
 },
