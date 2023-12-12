@@ -32,7 +32,7 @@ app.set('views', path.join(__dirname, 'src/views'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json({ extended: true }))
 
-app.use(express.static(__dirname,'public'));
+app.use(express.static('public'));
 
 //app.use(express.urlencoded());
 //app.use(express.json());
