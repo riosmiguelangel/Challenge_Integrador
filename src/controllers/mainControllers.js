@@ -10,6 +10,7 @@ module.exports = {
           res.render( 'index',{
           view: {
             title: "Home | Funkoshop",
+            logged : req.session.user_id
           },
           collections: licences,
           items: listaItems,
