@@ -36,7 +36,7 @@ app.use(express.static(__dirname + '/public'));
 
 //app.use(express.urlencoded());
 //app.use(express.json());
-
+//nada
 app.use(methodOverride('_method'));
 
 /* Rutas de la aplicacion */
