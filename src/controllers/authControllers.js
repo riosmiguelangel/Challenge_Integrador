@@ -56,6 +56,7 @@ authRegisterPost:  async (req, res) => {
     email: user.email,
     password: user.password,
   }
+  console.log("Algo")
 await userModel.crearUsuario(userSchema)
 res.redirect('/home');
 },
