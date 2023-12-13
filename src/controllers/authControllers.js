@@ -59,7 +59,7 @@ authRegisterPost:  async (req, res) => {
   }
   console.log("Algo")
 await userModel.crearUsuario(userSchema)
-res.redirect('./auth/login');
+res.redirect('./login');
 },
 
 authLogout : (req, res) =>{
