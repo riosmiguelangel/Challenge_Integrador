@@ -38,7 +38,11 @@ authLoginPost: async (req, res) => {
     //return logueado= req.session.user_id,
     //console.log("logueado: ",logueado),
     
-    res.redirect(`../../home?user_id=${valido.user_id}`)
+    res.redirect(`../../home?user_id=${valido.user_id}`,{
+      view: {
+        logged: req.session.user_id,
+      },
+    });
   }
 },
 
