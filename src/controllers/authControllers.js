@@ -12,7 +12,6 @@ authLogin: (req, res) => {
 },
 
 authLoginPost: async (req, res) => {
-  //const {email, password} = req.body
   const userLogin = {
     email : req.body.email,
     password : req.body.password,
