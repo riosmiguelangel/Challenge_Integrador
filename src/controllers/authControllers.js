@@ -43,7 +43,8 @@ authLoginPost: async (req, res) => {
 
 authRegister : (req, res) => res.render("./auth/register" ,{
   view:{
-      //title :" Register | Funkoshop"
+      
+    title :" Register | Funkoshop"
   },
 }),
 
@@ -58,7 +59,7 @@ authRegisterPost:  async (req, res) => {
   }
   console.log("Algo")
 await userModel.crearUsuario(userSchema)
-res.redirect('/home');
+res.redirect('./auth/login');
 },
 
 authLogout : (req, res) =>{
