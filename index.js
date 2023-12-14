@@ -42,8 +42,8 @@ app.use(methodOverride('_method'));
 /* Rutas de la aplicacion */
 
 app.use('/home',  mainRoutes);
-app.use('/shop', /*isLogged,*/ shopRoutes);
-app.use('/admin', /*isLogged,*/ adminRoutes);
+app.use('/shop', isLogged, shopRoutes);
+app.use('/admin', isLogged, adminRoutes);
 app.use('/auth', authRoutes);
 //app.use('/admin', →isLogged, adminRoutes) // /admin/detalles o /admin/actualizar /admin/bla
 app.use((req, res, next) =>{
