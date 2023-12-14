@@ -50,7 +50,7 @@ authRegister : (req, res) => res.render("./auth/register" ,{
   admin : false,
 }),
 
-authRegisterPost:  async (req, res) => {
+/*authRegisterPost:  async (req, res) => {
   const user = req.body;
   console.log(user)
   const userSchema = {
@@ -62,6 +62,24 @@ authRegisterPost:  async (req, res) => {
   console.log("Algo")
 await userModel.crearUsuario(userSchema)
 res.redirect('./login');
+},*/
+authRegisterPost:  async (req, res) => {
+  const user = req.body;
+  console.log(user)
+  const { name, lastname, email, password, password2 } = user;
+  const userSchema = {
+    name: user.name,
+    lastname: user.lastname,
+    email: user.email,
+    password: user.password,
+  };
+  const [existingUser] = await userModel.verificarUser(userSchema.email, userSchema.password);
+  if (existingUser) {
+    res.redirect('/auth/register?error=existing');
+  } else {
+await userModel.crearUsuario(userSchema)
+res.redirect('./login');
+}
 },
 
 authLogout : (req, res) =>{
