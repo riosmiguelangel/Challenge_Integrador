@@ -20,7 +20,7 @@ const crearUsuario = async (params) => {
 
 const verificarUser = async (email, password) => {
 	try {
-		const [verificado] = await conn.query(`SELECT * FROM user WHERE email = "${email}" AND password= "${password}";`)
+		const [verificado] = await conn.query(`SELECT * FROM user WHERE email = "${email}" ;`)
 		return verificado
 	} catch (error) {
 		console.log(error)
