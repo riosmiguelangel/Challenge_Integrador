@@ -12,6 +12,8 @@ module.exports = {
           },
           items: listaItems,
           sliderItems : lastItems,
+          logged: req.session.user_id,
+          admin : false,
         });
       },
 
@@ -29,6 +31,8 @@ module.exports = {
             enableGlide: true,
             items: listaItems,
             sliderItems : lastItems,
+            logged: req.session.user_id,
+            admin : false,
         });
     },
     
@@ -40,6 +44,8 @@ module.exports = {
         view:{
             title :" Cart | Funkoshop"
         },
+        logged: req.session.user_id,
+        admin : false,
     }),
     checkout : (req, res) => res.send("Pagina para ver los productos seleccionados"),
 };

@@ -8,6 +8,8 @@ authLogin: (req, res) => {
     view: {
       title: "Login | Funkoshop",
     },
+    logged: req.session.user_id,
+    admin : false,
   })
 },
 
@@ -36,16 +38,26 @@ authLoginPost: async (req, res) => {
       console.log(req.session.user_id)}*/
     //return logueado= req.session.user_id,
     //console.log("logueado: ",logueado),
+<<<<<<< HEAD
     
     res.redirect(`../../home?user_id=${valido.user_id}`)
+=======
+    res.redirect(`../../admin?user_id=${valido.user_id}`)
+>>>>>>> mision-6
   }
 },
 
 authRegister : (req, res) => res.render("./auth/register" ,{
   view:{
+<<<<<<< HEAD
       
     title :" Register | Funkoshop"
+=======
+      title :" Register | Funkoshop"
+>>>>>>> mision-6
   },
+  logged: req.session.user_id,
+  admin : false,
 }),
 
 authRegisterPost:  async (req, res) => {

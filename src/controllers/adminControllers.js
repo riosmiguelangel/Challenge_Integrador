@@ -6,13 +6,14 @@ const categoryModel = require('../models/categoryModel');
 module.exports = {
     adminView:  async (req, res) => {
         const listaItems = await itemsModel.getAllItems();
-       
+        console.log("lodeado en admin: ",req.session.user_id),
         res.render( './admin/admin',{
           view: {
             title: "Admin | Funkoshop",
           },
           items: listaItems,
-          
+          logged: req.session.user_id,
+          admin : true,
         });
       },
 
@@ -26,6 +27,8 @@ module.exports = {
             },
             categories : categories,
             licences: licences,
+            logged: req.session.user_id,
+            admin : true,
           }); 
     },
     createItem:  async (req, res) => {
@@ -44,6 +47,7 @@ module.exports = {
           licence_id: item.collection,
           category_id: item.category
         }
+        
       await itemsModel.crearItem(itemSchema)
       res.redirect('/admin');
     },
@@ -60,6 +64,8 @@ module.exports = {
         item: item,
         categories : categories,
         licences: licences,
+        logged: req.session.user_id,
+        admin : true,
       });
 
     }, 
