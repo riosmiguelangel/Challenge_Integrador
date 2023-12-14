@@ -18,38 +18,52 @@
                 </a>
             </picture>
             <ul class="navbar__menu">
-                <li class="navbar__item  with-submenu">
-                    <a class="navbar__link with-icon" href="/shop">Shop <iconify-icon
-                            icon="ion:chevron-down"></iconify-icon></a>
-                    <ul class="submenu">
-                        <li class="submenu__item">
-                            <a href="" class="submenu__link">Funkos</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="" class="submenu__link">Remeras</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="" class="submenu__link">Llaveros</a>
-                            
-                        </li>
-                    </ul>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="">Contacto</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" name="login" href="/auth/login">Login</a>
-                    <a class="navbar__link" name="logout" href="/auth/logout">Logout</a>
-                       
-                            
-
-                    
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__cart" href="/shop/cart">
-                        <img src="/img/icons/cart-icon.svg" alt="Carrito de compras">
-                    </a>
-                </li>
+                <% if(admin == true) {%>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="/home">VER TIENDA</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="/admin">ADMIN</a>
+                    </li>
+                    <li class="navbar__item">
+                        <% if(logged != undefined) {%>
+                            <a class="navbar__link" name="logout" href="/auth/logout">SALIR</a>
+                         <% } else { %>
+                            <a class="navbar__link" name="login" href="/auth/login">Login</a>
+                        <% } %>
+                    </li>
+                 <% } else { %>
+                    <li class="navbar__item  with-submenu">
+                        <a class="navbar__link with-icon" href="/shop">SHOP <iconify-icon
+                                icon="ion:chevron-down"></iconify-icon></a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a href="" class="submenu__link">Funkos</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a href="" class="submenu__link">Remeras</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a href="" class="submenu__link">Llaveros</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="home/contact">CONTACTO</a>
+                    </li>
+                    <li class="navbar__item">
+                        <% if(logged != undefined) {%>
+                            <a class="navbar__link" name="logout" href="/auth/logout">SALIR</a>
+                         <% } else { %>
+                            <a class="navbar__link" name="login" href="/auth/login">Login</a>
+                        <% } %>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__cart" href="/shop/cart">
+                            <img src="/img/icons/cart-icon.svg" alt="Carrito de compras">
+                        </a>
+                    </li>
+                <% } %>
             </ul>
         </nav>
     </header> <!-- Fin Header -->

@@ -1,0 +1,59 @@
+<%- include('partials/header') -%>
+<main class="main-container">
+    <section class="shop__content">
+        <form" method="POST" class="formContact">
+        <label class="labelContact" for="nombre">Nombre:</label><br />
+        <input class="inputContac" type="text" id="nombre" name="nombre" /><br />
+        <label class="labelContact" for="email">Email:</label><br />
+        <input class="inputContac" type="email" id="email" name="email" /><br />
+        <label class="labelContact" for="mensaje">Mensaje:</label><br />
+        <textarea class="textareaContact" id="mensaje" name="mensaje"></textarea><br />
+        <input class="inputContactSub" type="submit" value="Enviar mensaje" />
+    </form>
+        
+    </section>
+</main>
+<!--script src="../../js/item.js"></script-->
+<!--Inicio slider-->
+ <!--%- include('../components/slider') -%-->
+<!--Fin slider-->
+<style>
+.formContact {
+  width: 500px;
+  margin: 30px auto;
+  text-align: left;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.labelContact {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.inputContact,
+.textareaContact {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.inputContactSub[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+</style>
+<%- include('partials/footer') -%>
