@@ -1,7 +1,14 @@
 const express = require('express');
 const router = express.Router();
+const session = require('express-session');
 
 const shopControllers = require('../controllers/shopControllers');
+
+app.use(session({
+	secret: "S3cr3t01H@sh",
+	resave: false,
+	saveUninitialized: false,
+}))
 
 const isLogged = (req, res, next) =>{
 	if(!req.session.user_id){
