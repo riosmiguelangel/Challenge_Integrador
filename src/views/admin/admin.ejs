@@ -3,7 +3,8 @@
         <section class="container">
             <section class="search">
                 <button class="search__botton"><iconify-icon icon="material-symbols:search" width="42"></iconify-icon></BUtton></iconify-icon>
-                <input class="search__bar" type="text" placeholder="código, nombre o categoria">  
+                <input class="search__bar" id="search_item" name="search_item" type="search" placeholder="código, nombre o categoria">  
+                <!--input class="search__bar" id="search_i" name="search_i" type="search" placeholder="código, nombre o categoria"-->
             </section>
             <article class="list__items">
                 <h3 class="list__title">LISTADO DE PRODUCTOS</h3>
@@ -22,7 +23,7 @@
                     </thead>
                     <tbody>
                         <% items.forEach( item => { %>
-                            <tr>
+                            <tr class="list_product" data-search="'<%= item.sku%>'<%= item.product_name%><%= item.licence_name%>">
                                 <td><%= item.product_id%></td>
                                 <td><%= item.sku%></td>
                                 <td><%= item.product_name%></td>

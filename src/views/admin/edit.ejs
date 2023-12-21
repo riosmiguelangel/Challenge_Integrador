@@ -2,7 +2,7 @@
     <main class="container">
         <section class="crud-container">
             <h3 class="crud__title">EDIT ITEM</h3>
-            <form class="crud__items" action="/admin/edit/<%= item.product_id %>?_method=PUT" method="POST" enctype="application/x-www-form-urlencoded">
+            <form class="crud__items" action="/admin/edit/<%= item.product_id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <label for="category">Categoria:
                 <select name="category" id="category" required >
                     <% categories.forEach((category, i) =>{ %>
@@ -41,7 +41,8 @@
                         <!--label for="">Imágenes:</label>
                         <input id="img" type="file" name="images" multiple-->
                         <label  for="images">Imágenes:
-                        <input id="img" type="file" name="images" multiple></label>
+                            <!--input type="text" value="<%= item.image_front %> <%= item.image_back %>"-->
+                        <input id="img" type="file" name="images" multiple ></label>
                     </div>
                     
                     <section>

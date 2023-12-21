@@ -2,7 +2,6 @@ const itemsModel = require('../models/itemModel');
 const licenceModel = require('../models/licenceModel');
 const categoryModel = require('../models/categoryModel');
 
-
 module.exports = {
     adminView:  async (req, res) => {
         const listaItems = await itemsModel.getAllItems();
@@ -15,6 +14,7 @@ module.exports = {
           logged: req.session.user_id,
           admin : true,
         });
+  
       },
 
     createView : async(req, res) => {
@@ -73,21 +73,44 @@ module.exports = {
     editItem: async (req, res) => {
       const id = req.params.id;
       const item = req.body;
-      const itemSchema = {
-        product_name: item.name,
-        product_description: item.description,
-        price: item.price,
-        stock: item.stock,
-        discount: item.discount,
-        dues: item.dues,
-        //image_front: '/'+req.files[0].filename,
-        //image_back: '/'+req.files[1].filename,
-        licence_id: item.collection,
-        category_id: item.category
+
+      if(req.files[0].filename!=undefined) {
+        console.log("Las imagenes se cargaran")
+        const itemSchema = {
+          product_name: item.name,
+          product_description: item.description,
+          price: item.price,
+          stock: item.stock,
+          discount: item.discount,
+          dues: item.dues,
+          image_front: '/'+req.files[0].filename,
+          image_back: '/'+req.files[1].filename,
+          licence_id: item.collection,
+          category_id: item.category
+        }
+        console.log(itemSchema)
+        const resultado = await itemsModel.edit(itemSchema,id);
+        res.redirect('/admin');
+      } else {
+        console.log("No hay imaages cargadas")
+        const itemSchema = {
+          product_name: item.name,
+          product_description: item.description,
+          price: item.price,
+          stock: item.stock,
+          discount: item.discount,
+          dues: item.dues,
+          image_front: item.image_front,
+          image_back: item.image_back,
+          licence_id: item.collection,
+          category_id: item.category
+        }
+        console.log(itemSchema)
+        const resultado = await itemsModel.edit(itemSchema,id);
+        console.log("Resultado: ", resultado);
+        res.redirect('/admin');
       }
-      const resultado = await itemsModel.edit(itemSchema,id);
-      console.log("Resultado: ", resultado);
-      res.redirect('/admin');
+      
     },
 
    
@@ -96,4 +119,10 @@ module.exports = {
       await itemsModel.delete(id);
       res.redirect('/admin');
     },
+
+    searchItems : (req, res) => {
+      const item = req.body;
+      const search =item.search_i.value();
+      console.log(search)
+    }
 };
